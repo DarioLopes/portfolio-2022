@@ -1,0 +1,21 @@
+.page-about {
+  .main-title {
+    margin: 0 auto;
+
+    .title {
+      display: table;
+      opacity: 1;
+      margin: auto;
+      font-size: 5vw;
+      line-height: 1.55;
+
+      .atropos {
+        display: inline-block;
+
+        &-inner {
+          overflow: initial;
+        }
+      }
+    }
+  }
+}

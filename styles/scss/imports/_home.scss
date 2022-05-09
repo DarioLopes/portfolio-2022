@@ -1,0 +1,30 @@
+.home-container {
+  min-height: calc(100vh - 80px); //80 => header height
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    margin-top: -2vh;
+
+    @media (min-width: 992px) {
+      margin-top: -4vh;
+    }
+    .gold {
+      .atropos-inner {
+        overflow: initial;
+      }
+      .title-anim {
+        &:last-child {
+          display: block;
+          margin-top: -2vh;
+
+          @media (min-width: 992px) {
+            margin-top: -4vh;
+          }
+        }
+      }
+    }
+  }
+}

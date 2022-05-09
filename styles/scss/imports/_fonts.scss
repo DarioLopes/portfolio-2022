@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/CircularStd-Light.woff2") format("woff2"),
+    url("/fonts/CircularStd-Light.woff") format("woff"),
+    url("/fonts/CircularStd-Light.svg#CircularSpotifyText-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/CircularStd-Medium.woff2") format("woff2"),
+    url("/fonts/CircularStd-Medium.woff") format("woff"),
+    url("/fonts/CircularStd-Medium.svg#CircularStd-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/CircularStd-Black.woff2") format("woff2"),
+    url("/fonts/CircularStd-Black.woff") format("woff"),
+    url("/fonts/CircularStd-Black.svg#CircularStd-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brilon";
+  src: url("/fonts/Brilon-Regular.woff2") format("woff2"),
+    url("/fonts/Brilon-Regular.woff") format("woff"),
+    url("/fonts/Brilon-Regular.svg#Brilon_1.1-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Evossry";
+  src: url("/fonts/Evossry-Regular.woff2") format("woff2"),
+    url("/fonts/Evossry-Regular.woff") format("woff"),
+    url("/fonts/Evossry-Regular.svg#Evossry-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
