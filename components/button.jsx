@@ -4,11 +4,7 @@ const Button = (props) => {
   return (
     <>
       <Link href={props.href}>
-        <a
-          className={`${props.transparent ? 'transparent ' : ''}${
-            props.line ? 'has-line ' : ''
-          }button eat-light`}
-        >
+        <a className={`${props.transparent ? 'transparent ' : ''}${props.line ? 'has-line ' : ''}button eat-light`}>
           {props.line ? <span className="line"></span> : null}
           <span>{props.children}</span>
         </a>

@@ -4,9 +4,9 @@ import { useWindowSize } from 'react-window-size-hook'
 import { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { motion } from 'framer-motion'
-
 import 'atropos/css'
 import 'swiper/css'
+
 const SliderBottom = (props) => {
   const [width] = useWindowSize()
   return (
@@ -15,17 +15,7 @@ const SliderBottom = (props) => {
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={0}
-          slidesPerView={
-            width < 768
-              ? 1
-              : width < 992
-              ? 2
-              : width < 1200
-              ? 3
-              : width < 1921
-              ? 5
-              : 5
-          }
+          slidesPerView={width < 768 ? 1 : width < 992 ? 2 : width < 1200 ? 3 : width < 1921 ? 5 : 5}
           loop={true}
           navigation
           pagination={{ clickable: true }}
@@ -57,11 +47,7 @@ const SliderBottom = (props) => {
                         duration: 1,
                       }}
                     >
-                      <Card
-                        image={work.image}
-                        href={work.href ? work.href : '#'}
-                        title={work.title}
-                      />
+                      <Card image={work.image} href={work.href ? work.href : '#'} title={work.title} />
                     </motion.div>
                   </Atropos>
                 </div>

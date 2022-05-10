@@ -51,12 +51,7 @@ const Home = () => {
                   />
                 </clipPath>
               </defs>
-              <g
-                id="stroke-to-anim"
-                data-name="stroke-to-anim"
-                transform="translate(-176.905 1226.994)"
-                clipPath="url(#clip-path)"
-              >
+              <g id="stroke-to-anim" data-name="stroke-to-anim" transform="translate(-176.905 1226.994)" clipPath="url(#clip-path)">
                 <motion.path
                   id="stroke-anim"
                   variants={pathAnim}

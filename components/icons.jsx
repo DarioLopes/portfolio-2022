@@ -19,50 +19,50 @@ import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 
 const Icons = () => {
-    const controlsIcon = useAnimation()
+  const controlsIcon = useAnimation()
 
-    const paramsIcon = (i) => ({
-        opacity: [0, 1],
-        y: [20, 0],
-        transition: {
-            duration: 1,
-            ease: 'easeOut',
-            delay: (i + 50) * 0.05,
-        },
-    })
+  const paramsIcon = (i) => ({
+    opacity: [0, 1],
+    y: [20, 0],
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+      delay: (i + 50) * 0.05,
+    },
+  })
 
-    useEffect(() => {
-        controlsIcon.start((i) => paramsIcon(i))
-    }, [])
+  useEffect(() => {
+    controlsIcon.start((i) => paramsIcon(i))
+  }, [])
 
-    return (
-        <div className="svg-container">
-            <motion.span custom={1} animate={controlsIcon} className="icon-container">
-                <Docker />
-            </motion.span>
-            <motion.span custom={2} animate={controlsIcon} className="icon-container">
-                <Figma />
-            </motion.span>
-            <motion.span custom={3} animate={controlsIcon} className="icon-container">
-                <Github />
-            </motion.span>
-            <motion.span custom={4} animate={controlsIcon} className="icon-container">
-                <Html />
-            </motion.span>
-            <motion.span custom={5} animate={controlsIcon} className="icon-container">
-                <Illustrator />
-            </motion.span>
-            <motion.span custom={6} animate={controlsIcon} className="icon-container">
-                <Jquery />
-            </motion.span>
-            <motion.span custom={7} animate={controlsIcon} className="icon-container">
-                <Json />
-            </motion.span>
-            <motion.span custom={8} animate={controlsIcon} className="icon-container">
-                <Reactjs />
-            </motion.span>
-        </div>
-    )
+  return (
+    <div className="svg-container">
+      <motion.span custom={1} animate={controlsIcon} className="icon-container">
+        <Docker />
+      </motion.span>
+      <motion.span custom={2} animate={controlsIcon} className="icon-container">
+        <Figma />
+      </motion.span>
+      <motion.span custom={3} animate={controlsIcon} className="icon-container">
+        <Github />
+      </motion.span>
+      <motion.span custom={4} animate={controlsIcon} className="icon-container">
+        <Html />
+      </motion.span>
+      <motion.span custom={5} animate={controlsIcon} className="icon-container">
+        <Illustrator />
+      </motion.span>
+      <motion.span custom={6} animate={controlsIcon} className="icon-container">
+        <Jquery />
+      </motion.span>
+      <motion.span custom={7} animate={controlsIcon} className="icon-container">
+        <Json />
+      </motion.span>
+      <motion.span custom={8} animate={controlsIcon} className="icon-container">
+        <Reactjs />
+      </motion.span>
+    </div>
+  )
 }
 
 export default Icons

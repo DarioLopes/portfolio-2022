@@ -15,11 +15,5 @@ export default function Main(props) {
       : setCssClass(router.pathname.replace(/\//, '-'))
   }, [router.isReady])
 
-  return (
-    <main
-      className={`page${cssClass}${props.expendTo ? ' ' + props.expendTo : ''}`}
-    >
-      {props.children}
-    </main>
-  )
+  return <main className={`page${cssClass}${props.expendTo ? ' ' + props.expendTo : ''}`}>{props.children}</main>
 }

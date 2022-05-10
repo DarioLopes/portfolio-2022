@@ -38,9 +38,7 @@ const Header = () => {
                     duration: 1,
                   }}
                   key={link.id}
-                  className={`menu-item${
-                    router.pathname === link.url ? ' active' : ''
-                  }`}
+                  className={`menu-item${router.pathname === link.url ? ' active' : ''}`}
                 >
                   <Link href={link.url}>
                     <a>
