@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import Main from '../../components/main'
-import SliderBottom from '../../components/slider-bottom'
+import Main from '../../components/Main'
+import Slider from '../../components/Slider'
 
 export default function WorksSingle() {
   const router = useRouter()
@@ -49,7 +49,7 @@ export default function WorksSingle() {
       <Main expendTo="single-work full">
         <p>Work: {pid}</p>
       </Main>
-      <SliderBottom works={works} />
+      <Slider works={works} />
     </>
   )
 }

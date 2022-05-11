@@ -1,4 +1,4 @@
-import Card from './card.jsx'
+import Card from './Card.jsx'
 import Atropos from 'atropos/react'
 import { useWindowSize } from 'react-window-size-hook'
 import { Navigation, Pagination } from 'swiper'
