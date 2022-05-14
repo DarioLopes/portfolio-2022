@@ -1,7 +1,7 @@
 import { getSkills } from '../../lib/api'
-import Head from '../../components/head'
-import Main from '../../components/main'
-import Letters from '../../components/letters'
+import Head from '../../components/Head'
+import Main from '../../components/Main'
+import Letters from '../../components/Letters'
 import { motion, useAnimation } from 'framer-motion'
 import { useState, useEffect } from 'react'
 

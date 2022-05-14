@@ -1,4 +1,4 @@
-import Letters from '../components/letters'
+import Letters from '../components/Letters'
 
 export default function errorPage() {
   return (
