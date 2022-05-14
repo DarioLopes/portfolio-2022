@@ -12,7 +12,7 @@ body {
   position: relative;
   background: $color1;
   background: radial-gradient(circle, $color2 0%, $color1 100%);
-  font-family: "Circular", sans-serif;
+  font-family: 'Circular', sans-serif;
   font-size: 16px;
   font-weight: 300; //300/500/900
   color: white;
@@ -27,14 +27,14 @@ body {
   }
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
-    background: transparent url("/img/noise.webp") center/auto repeat;
+    background: transparent url('/img/noise.webp') center/auto repeat;
     z-index: -1;
   }
 }
@@ -139,12 +139,7 @@ h6 {
   background: rgb(255, 255, 255);
   pointer-events: none;
   z-index: 1000;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0.15) 33%,
-    rgba(255, 255, 255, 0) 66%
-  );
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 33%, rgba(255, 255, 255, 0) 66%);
 }
 
 .light-container {
@@ -200,7 +195,7 @@ h6 {
 }
 
 .pretitle {
-  font-family: "Evossry";
+  font-family: 'Evossry';
   font-size: 12vw;
   line-height: 0;
   color: $color3;
@@ -225,7 +220,7 @@ h6 {
 }
 
 .title {
-  font-family: "Brilon";
+  font-family: 'Brilon';
   font-size: 7.4vw;
   color: white;
   cursor: default;
@@ -444,7 +439,7 @@ h6 {
       display: inline-block;
       transform-origin: center;
       // Gold effect => Background-clip + transform = bug on FF + Chrome -- so putted background here... unfortunetaly
-      background-image: url("/img/gold.jpg");
+      background-image: url('/img/gold.jpg');
       background-position: 40% 50%;
       background-size: 300% 150%;
       background-clip: text;
@@ -488,7 +483,7 @@ h6 {
           text-align: left;
           padding-left: 0.4vw;
           @media (min-width: 576px) {
-            width: 5.85vw;
+            width: 6.65vw;
           }
         }
         + .no-maj {
@@ -589,7 +584,7 @@ h6 {
         opacity: 0.05;
         position: absolute;
         z-index: 0;
-        font-family: "Evossry", sans-serif;
+        font-family: 'Evossry', sans-serif;
         font-size: 5.5em;
         line-height: 0.8;
         white-space: nowrap;
@@ -637,4 +632,18 @@ h6 {
     text-transform: uppercase;
     opacity: 0;
   }
+}
+
+.line {
+  display: block;
+  position: absolute;
+  height: 65px;
+  width: 1px;
+  right: 0;
+  left: 0;
+  top: calc(-100% + 10px);
+  margin: auto;
+  background-color: $color4;
+  transform-origin: center bottom;
+  transition: $anim;
 }

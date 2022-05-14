@@ -6,24 +6,19 @@ import axios from 'axios'
 
 const Header = () => {
   const router = useRouter()
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [links, setLinks] = useState([])
 
   useEffect(() => {
-    ;(async function () {
-      const result = await axios
-        .get(`${process.env.API}/items/pages`)
-        .then((response) => response.data)
-        .catch((error) => console.log(error))
-
-      setLinks(result.data)
-    })()
-
-    setLoading(false)
-  }, [loading])
+    setLoading(true)
+    axios.get(`${process.env.API}/items/pages`).then((response) => {
+      setLinks(response.data.data)
+      setLoading(false)
+    })
+  }, [])
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid header-container">
       <div className="row">
         <div className="col-12 col-lg-4 offset-lg-4 p-0">
           <header>

@@ -18,7 +18,7 @@ import Xd from '../public/img/svg/xd.svg'
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 
-const Icons = () => {
+const Icons = (props) => {
   const controlsIcon = useAnimation()
 
   const paramsIcon = (i) => ({
@@ -37,30 +37,11 @@ const Icons = () => {
 
   return (
     <div className="svg-container">
-      <motion.span custom={1} animate={controlsIcon} className="icon-container">
-        <Docker />
-      </motion.span>
-      <motion.span custom={2} animate={controlsIcon} className="icon-container">
-        <Figma />
-      </motion.span>
-      <motion.span custom={3} animate={controlsIcon} className="icon-container">
-        <Github />
-      </motion.span>
-      <motion.span custom={4} animate={controlsIcon} className="icon-container">
-        <Html />
-      </motion.span>
-      <motion.span custom={5} animate={controlsIcon} className="icon-container">
-        <Illustrator />
-      </motion.span>
-      <motion.span custom={6} animate={controlsIcon} className="icon-container">
-        <Jquery />
-      </motion.span>
-      <motion.span custom={7} animate={controlsIcon} className="icon-container">
-        <Json />
-      </motion.span>
-      <motion.span custom={8} animate={controlsIcon} className="icon-container">
-        <Reactjs />
-      </motion.span>
+      {props.skills.map((skill, i) => (
+        <motion.span key={`${props.slug}-${props.id}-${skill.skills_id.icon}`} custom={i} animate={controlsIcon} className="icon-container">
+          <img src={`${process.env.API}/assets/${skill.skills_id.icon}.svg`} />
+        </motion.span>
+      ))}
     </div>
   )
 }

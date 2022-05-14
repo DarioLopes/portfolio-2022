@@ -7,7 +7,11 @@ const Card = (props) => {
       <a>
         <div className="flip-card-wrapper" data-atropos-offset="1">
           <span className="flip-card-wrapper-bg">
-            <Image layout="fill" src={!props.image ? '/img/chefatable-430x600.png' : props.image} alt={!props.children ? props.title : ''} />
+            <Image
+              layout="fill"
+              src={!props.cover ? '/img/chefatable-430x600.png' : `${process.env.API}/assets/${props.cover}&w=430&h=640&f=crop&q=75`}
+              alt={!props.children ? props.title : ''}
+            />
           </span>
 
           <span className="flip-card-wrapper-button">

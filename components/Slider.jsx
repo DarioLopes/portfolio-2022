@@ -7,22 +7,23 @@ import { motion } from 'framer-motion'
 import 'atropos/css'
 import 'swiper/css'
 
-const SliderBottom = (props) => {
+const Slider = (props) => {
   const [width] = useWindowSize()
+
   return (
-    <div className="container-fluid">
+    <div className={`container-fluid ${props.cssClass}`}>
       <div className="row">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={0}
-          slidesPerView={width < 768 ? 1 : width < 992 ? 2 : width < 1200 ? 3 : width < 1921 ? 5 : 5}
+          slidesPerView={width < 768 ? 1 : width < 992 ? 2 : width < 1200 ? 3 : width < 1921 ? 5 : 6}
           loop={true}
           navigation
           pagination={{ clickable: true }}
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
         >
-          {props.works.map((work, i) => {
+          {props.works.data.map((work, i) => {
             return (
               <SwiperSlide key={i}>
                 <div className="col-12 flip-card">
@@ -47,7 +48,7 @@ const SliderBottom = (props) => {
                         duration: 1,
                       }}
                     >
-                      <Card image={work.image} href={work.href ? work.href : '#'} title={work.title} />
+                      <Card cover={work.cover} href={work.slug ? work.slug : '#'} title={work.name} />
                     </motion.div>
                   </Atropos>
                 </div>
@@ -59,4 +60,4 @@ const SliderBottom = (props) => {
     </div>
   )
 }
-export default SliderBottom
+export default Slider

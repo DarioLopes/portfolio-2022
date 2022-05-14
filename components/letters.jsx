@@ -1,15 +1,16 @@
 import { motion, useAnimation } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import Atropos from 'atropos/react'
 import 'atropos/css'
-import { useEffect, useState } from 'react'
 
 const Letters = (props) => {
   const letters = useAnimation()
   const [text, setText] = useState('')
-  const [lettersAnim, setLettersAnim] = useState(
+  const [customLettersAnim, setCustomLettersAnim] = useState(
     props?.anim ? props.anim : letters //if not set, default is letters anim set
   )
-  const lettersParams = (i) => ({
+
+  const lettersAnim = (i) => ({
     y: [25, 0],
     opacity: [0, 1],
     skewX: [10, 0],
@@ -28,15 +29,14 @@ const Letters = (props) => {
     },
   })
 
-  const detectCapital = (ch) => {
-    return ch.charCodeAt() >= 65 && ch.charCodeAt() <= 90
-  }
+  const detectCapital = (ch) => ch.charCodeAt() >= 65 && ch.charCodeAt() <= 90
 
   useEffect(() => {
     !text || typeof text === undefined ? setText('no text provided') : setText(props.text)
-    if (lettersAnim === 'letters') setLettersAnim(letters)
+    if (customLettersAnim === 'letters') setCustomLettersAnim(letters)
 
-    letters.start((i) => lettersParams(i))
+    letters.start((i) => lettersOpacity(i))
+    letters.start((i) => lettersAnim(i))
   })
 
   useEffect(() => {
@@ -54,13 +54,14 @@ const Letters = (props) => {
           activeOffset={0}
           shadow={false}
           highlight={false}
-          key={index}
+          key={props.text + index + props.custom}
         >
           <motion.span
             custom={index}
-            animate={lettersAnim}
+            animate={customLettersAnim}
             aria-hidden="true"
-            key={index}
+            key={props.text + index}
+            style={{ opacity: 0 }}
             className={`${letter === ' ' ? 'letter-single space' : 'letter-single'}`}
           >
             {letter}
