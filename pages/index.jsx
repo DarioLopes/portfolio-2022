@@ -1,7 +1,7 @@
-import Main from '../components/main'
-import Button from '../components/button'
-import Head from '../components/head'
-import Letters from '../components/letters'
+import Main from '../components/Main'
+import Button from '../components/Button'
+import Head from '../components/Head'
+import Letters from '../components/Letters'
 import { motion, useAnimation } from 'framer-motion'
 
 const Home = () => {
