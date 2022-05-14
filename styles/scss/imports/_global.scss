@@ -221,7 +221,7 @@ h6 {
 
 .title {
   font-family: 'Brilon';
-  font-size: 7.4vw;
+  font-size: 7.3vw;
   color: white;
   cursor: default;
   user-select: none;
@@ -459,6 +459,10 @@ h6 {
   transform-origin: top center;
   @media (min-width: 376px) {
     letter-spacing: 0.4em;
+  }
+
+  @media (max-width: 376px) {
+    font-size: 1.1em;
   }
 }
 

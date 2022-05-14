@@ -40,8 +40,6 @@ export default function Works(works) {
 
   const handleActive = (swiper) => {
     setPosition(swiper.realIndex)
-    console.log(swiper.realIndex)
-    console.log(swiper)
   }
 
   useEffect(() => {

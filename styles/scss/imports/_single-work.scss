@@ -5,8 +5,12 @@
   }
 
   .button-container {
-    margin-top: -20px;
+    margin-top: 20px;
     margin-bottom: 50px;
+
+    @media (min-width: 576px) {
+      margin-top: -20px;
+    }
 
     .svg-container {
       display: flex;
@@ -29,9 +33,12 @@
   .mockup-design {
     display: block;
     width: 100%;
-    max-width: 83.33333333%;
     margin: auto;
     padding: 0px 15px;
+
+    @media (min-width: 992px) {
+      max-width: 83.33333333%;
+    }
 
     img {
       width: 100%;
@@ -49,7 +56,11 @@
   }
 
   .datas-container {
-    padding: 240px 9px;
+    padding: 80px 30px;
+    @media (min-width: 992px) {
+      padding: 240px 9px;
+    }
+
     .subtitle {
       margin-left: -2px;
     }
@@ -96,6 +107,12 @@
         height: 100vh;
         background: linear-gradient(0deg, rgba(22, 16, 50, 1) 0%, rgba(22, 16, 50, 0) 100%);
       }
+    }
+  }
+
+  .swiper {
+    @media (min-width: 576px) {
+      padding: 0 25%;
     }
   }
 
