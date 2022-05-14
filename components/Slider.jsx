@@ -6,12 +6,21 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { motion } from 'framer-motion'
 import 'atropos/css'
 import 'swiper/css'
+import Letters from './Letters'
 
 const Slider = (props) => {
   const [width] = useWindowSize()
 
   return (
     <div className={`container-fluid ${props.cssClass}`}>
+      <div className="row">
+        <div className="main-title">
+          <h1 className="title small">
+            <Letters text={'Other Works'} custom={0} delay={15} />
+          </h1>
+        </div>
+      </div>
+
       <div className="row">
         <Swiper
           modules={[Navigation, Pagination]}

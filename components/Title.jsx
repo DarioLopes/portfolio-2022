@@ -26,6 +26,10 @@ export default function CoverTitle(props) {
     })
   }, [])
 
+  useEffect(() => {
+    controls.start((i) => params(i))
+  })
+
   return (
     <div className="content-slide">
       <div className="main-title">
@@ -37,10 +41,12 @@ export default function CoverTitle(props) {
 
       <div className="button-container">
         <motion.span custom={1} animate={controls} className="subtitle">
-          {props.subtitle ? props.subtitle : 'Designed & Developed with'}
+          {props.subtitle && props.subtitle.length ? props.subtitle : 'Designed & Developed with'}
         </motion.span>
 
-        <Icons skills={skills} />
+        <motion.span custom={2} animate={controls} className="icons-container">
+          <Icons skills={skills} />
+        </motion.span>
 
         {props?.button && props.button === true ? (
           <motion.span custom={3} animate={controls}>

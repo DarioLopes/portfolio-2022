@@ -2,11 +2,27 @@ import { getSkills } from '../../lib/api'
 import Head from '../../components/head'
 import Main from '../../components/main'
 import Letters from '../../components/letters'
-import { useState } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 export default function Skills(skills) {
   const [title] = useState('Skills')
-  console.log(skills)
+  const controls = useAnimation()
+  const params = (i) => ({
+    opacity: [0, 1],
+    y: [25, 0],
+    scale: [0.98, 1],
+    transition: {
+      duration: 1.5,
+      ease: 'easeOut',
+      delay: (i + 15) * 0.15,
+    },
+  })
+
+  useEffect(() => {
+    controls.start((i) => params(i))
+  })
+
   return (
     <Main>
       <Head title={title} />
@@ -19,16 +35,16 @@ export default function Skills(skills) {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container-fluid container-skills">
         <div className="row">
-          {skills.data.map((skill) => (
-            <div key={`${skill.icon}-${skill.id}`} className="col-12 col-lg-4 col-xl-3 card-skill">
+          {skills.data.map((skill, i) => (
+            <motion.div key={`${skill.icon}-${skill.id}`} custom={i} animate={controls} className="col-12 col-lg-6 col-xl-3 card-skill">
               <img src={`${process.env.API}/assets/${skill.icon}`} alt="" />
               <h2 className="subtitle" style={{ opacity: 1 }}>
                 {skill.skill}
               </h2>
               <p>{skill.content ? skill.content : null}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -40,6 +56,5 @@ export async function getStaticProps() {
   const skills = await getSkills()
   return {
     props: skills,
-    revalidate: 43200, //43200, // Refresh every 43200 seconds => every 12 hours
   }
 }

@@ -1,7 +1,9 @@
 .single-work {
   .main-title {
     text-align: center;
+    margin-top: 80px;
   }
+
   .button-container {
     margin-top: -20px;
     margin-bottom: 50px;
@@ -98,8 +100,8 @@
   }
 
   .swiper-wrapper {
-    margin-top: 90px;
-    margin-bottom: 270px;
+    margin-bottom: 180px;
+
     @media (min-width: 1920px) {
       padding: 0 25%;
     }

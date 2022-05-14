@@ -1,4 +1,8 @@
 .page-skills {
+  @media (min-width: 992px) {
+    width: 66.666666%;
+  }
+
   .main-title {
     margin: 0 auto;
 
@@ -20,7 +24,14 @@
   }
   .card-skill {
     display: block;
-    padding: 25px 40px 25px 9px;
+    padding: 25px 40px 25px 0;
     line-height: 2.25;
+    img {
+      margin-bottom: 30px;
+    }
+    .subtitle {
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
   }
 }

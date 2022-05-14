@@ -43,11 +43,11 @@ export default function WorksSingle({ single, works }) {
     cover.start(() => ({
       opacity: [0, 1],
       y: [25, 0],
-      scale: [0.98, 1],
+      scale: [0.96, 1],
       transition: {
-        duration: 1,
+        duration: 1.5,
         ease: 'easeOut',
-        delay: 3,
+        delay: 2,
       },
     }))
   })

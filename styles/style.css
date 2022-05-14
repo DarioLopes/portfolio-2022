@@ -771,6 +771,11 @@ header ul li:last-child a::before {
   margin-top: calc(50vh - 340px);
   width: 90vw;
 }
+@media (min-width: 1200px) {
+  .page-works .navigation {
+    margin-top: calc(50vh - 370px);
+  }
+}
 @media (min-width: 1920px) {
   .page-works .navigation {
     margin-top: calc(50vh - 400px);
@@ -887,6 +892,11 @@ header ul li:last-child a::before {
 .page-works .button-container .subtitle {
   text-align: center;
 }
+@media (max-width: 1921px) {
+  .page-works .button-container .subtitle {
+    margin-top: 40px;
+  }
+}
 .page-works .button-container .svg-container {
   display: flex;
   justify-content: center;
@@ -911,8 +921,8 @@ header ul li:last-child a::before {
   opacity: 0;
   z-index: -1;
   transition: opacity 0.6s ease-out;
-  animation: zoomInAndOut 12s ease-in-out infinite alternate;
-  -webkit-animation: zoomInAndOut 12s ease-in-out infinite alternate;
+  animation: zoomInAndOut 6s ease-in-out infinite alternate;
+  -webkit-animation: zoomInAndOut 6s ease-in-out infinite alternate;
 }
 .page-works .bg img {
   width: 100vw;
@@ -957,6 +967,7 @@ header ul li:last-child a::before {
 
 .single-work .main-title {
   text-align: center;
+  margin-top: 80px;
 }
 .single-work .button-container {
   margin-top: -20px;
@@ -1040,8 +1051,7 @@ header ul li:last-child a::before {
   background: linear-gradient(0deg, rgb(22, 16, 50) 0%, rgba(22, 16, 50, 0) 100%);
 }
 .single-work .swiper-wrapper {
-  margin-top: 90px;
-  margin-bottom: 270px;
+  margin-bottom: 180px;
 }
 @media (min-width: 1920px) {
   .single-work .swiper-wrapper {
@@ -1049,6 +1059,11 @@ header ul li:last-child a::before {
   }
 }
 
+@media (min-width: 992px) {
+  .page-skills {
+    width: 66.666666%;
+  }
+}
 .page-skills .main-title {
   margin: 0 auto;
 }
@@ -1067,8 +1082,15 @@ header ul li:last-child a::before {
 }
 .page-skills .card-skill {
   display: block;
-  padding: 25px 40px 25px 9px;
+  padding: 25px 40px 25px 0;
   line-height: 2.25;
+}
+.page-skills .card-skill img {
+  margin-bottom: 30px;
+}
+.page-skills .card-skill .subtitle {
+  margin-left: 0;
+  margin-bottom: 15px;
 }
 
 .page-about .main-title {
