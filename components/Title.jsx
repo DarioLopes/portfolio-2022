@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Icons from './Icons'
 
 export default function CoverTitle(props) {
-  const controls = useAnimation()
+  const texts = useAnimation()
   const [skills, setSkills] = useState([])
   const params = (i) => ({
     opacity: [0, 1],
@@ -24,11 +24,11 @@ export default function CoverTitle(props) {
     axios.get(`${process.env.API}/items/works/${props.id}?fields=project_skills.skills_id.icon`).then((response) => {
       setSkills(response.data.data.project_skills)
     })
-  }, [])
+  }, [props.skills])
 
   useEffect(() => {
-    controls.start((i) => params(i))
-  })
+    texts.start((i) => params(i))
+  }, [])
 
   return (
     <div className="content-slide">
@@ -40,16 +40,16 @@ export default function CoverTitle(props) {
       </div>
 
       <div className="button-container">
-        <motion.span custom={1} animate={controls} className="subtitle">
+        <motion.span custom={1} animate={texts} className="subtitle">
           {props.subtitle && props.subtitle.length ? props.subtitle : 'Designed & Developed with'}
         </motion.span>
 
-        <motion.span custom={2} animate={controls} className="icons-container">
+        <motion.span custom={2} animate={texts} className="icons-container">
           <Icons skills={skills} />
         </motion.span>
 
         {props?.button && props.button === true ? (
-          <motion.span custom={3} animate={controls}>
+          <motion.span custom={3} animate={texts}>
             <Button href={`/works/${props.slug}`} line>
               See more
             </Button>

@@ -84,7 +84,7 @@ const Home = () => {
         <div className="button-container">
           <motion.span custom={8} animate={controls}>
             <Button href="/works" line>
-              Watch my work
+              Watch my Works
             </Button>
           </motion.span>
 

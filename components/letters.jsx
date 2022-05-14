@@ -39,10 +39,6 @@ const Letters = (props) => {
     letters.start((i) => lettersAnim(i))
   })
 
-  useEffect(() => {
-    letters.start((i) => lettersOpacity(i))
-  }, [])
-
   return (
     <span aria-label={text} role={text} className="title-anim">
       {text.split('').map((letter, index) => (
