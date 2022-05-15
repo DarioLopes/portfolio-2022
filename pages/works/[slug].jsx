@@ -97,7 +97,7 @@ export default function WorksSingle({ single, works }) {
               </div>
             </div>
           </Main>
-          <Slider works={works} cssClass="single-work" />
+          <Slider works={works} currentWork={work.id} cssClass="single-work" />
         </motion.div>
       </AnimatePresence>
     </>

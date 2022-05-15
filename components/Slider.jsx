@@ -33,7 +33,7 @@ const Slider = (props) => {
           // onSlideChange={() => console.log("slide change")}
         >
           {props.works.data.map((work, i) => {
-            return (
+            return work.id !== props?.currentWork ? (
               <SwiperSlide key={i}>
                 <div className="col-12 flip-card eat-light">
                   <span className="line"></span>
@@ -62,6 +62,8 @@ const Slider = (props) => {
                   </Atropos>
                 </div>
               </SwiperSlide>
+            ) : (
+              ''
             )
           })}
         </Swiper>
