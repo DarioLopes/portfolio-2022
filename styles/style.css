@@ -653,12 +653,18 @@ h6 {
   opacity: 0;
 }
 .button-container .content-wrapper {
+  display: none;
   width: 100%;
   margin-top: 60px;
   max-width: 700px;
   text-align: center;
   font-size: 1.15em;
   padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .button-container .content-wrapper {
+    display: block;
+  }
 }
 
 .line {
@@ -1075,6 +1081,16 @@ header ul li:last-child a::before {
   .single-work .button-container .svg-container > span:last-child,
 .single-work .button-container .svg-container svg:last-child {
     margin-right: 0;
+  }
+}
+@media (max-height: 919px) {
+  .single-work .button-container .content-wrapper {
+    display: none;
+  }
+}
+@media (min-height: 920px) {
+  .single-work .button-container .content-wrapper {
+    display: block;
   }
 }
 .single-work .mockup-design {

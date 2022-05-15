@@ -45,6 +45,16 @@
         }
       }
     }
+
+    .content-wrapper {
+      @media (max-height: 919px) {
+        display: none;
+      }
+
+      @media (min-height: 920px) {
+        display: block;
+      }
+    }
   }
 
   .mockup-design {

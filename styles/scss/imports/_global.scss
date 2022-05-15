@@ -683,12 +683,17 @@ h6 {
   }
 
   .content-wrapper {
+    display: none;
     width: 100%;
     margin-top: 60px;
     max-width: 700px;
     text-align: center;
     font-size: 1.15em;
     padding: 0 15px;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
 }
 

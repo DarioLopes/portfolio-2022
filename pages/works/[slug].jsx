@@ -68,15 +68,6 @@ export default function WorksSingle({ single, works }) {
                 <img src={`${process.env.API}/assets/${work.mockup}`} alt={work.name} />
               </motion.div>
             </div>
-
-            {work?.side_image ? (
-              <div className="container-fluid">
-                <div className="mockup-design eat-light">
-                  {/* <Image layout="fill" src=`${process.env.API}/assets/${work.mockup}` alt={work.name} /> */}
-                  <img src={`${process.env.API}/assets/${work.side_image}`} alt={work.name} />
-                </div>
-              </div>
-            ) : null}
           </Main>
           <Slider works={works} currentWork={work.id} cssClass="single-work" />
         </motion.div>
