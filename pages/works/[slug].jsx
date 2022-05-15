@@ -51,6 +51,7 @@ export default function WorksSingle({ single, works }) {
       },
     }))
   })
+
   //* console.log(work.content) // "<p> bla...bla...bla </p>"
   //* console.log(work.content_title) // Beaucartel is an audio...
   //* console.log(work.cover)
@@ -68,7 +69,7 @@ export default function WorksSingle({ single, works }) {
           <Main expendTo={`single-work full ${work.slug}`}>
             <div className="bg-container">
               <motion.span className="bg">
-                <Image layout="fill" src={`${process.env.API}/assets/${work.cover}`} priority="true" style={{ opacity: 0.3 }} />
+                <Image layout="fill" src={`${process.env.API}/assets/${work.cover}`} priority="true" style={{ opacity: 0.3 }} alt={work.name} />
               </motion.span>
             </div>
 
@@ -76,7 +77,7 @@ export default function WorksSingle({ single, works }) {
               <Title slug={work.slug} id={work.id} subtitle={work.content_title}>
                 {work.name}
               </Title>
-              <motion.div className="mockup-design" animate={cover}>
+              <motion.div className="mockup-design eat-light" animate={cover}>
                 <img src={`${process.env.API}/assets/${work.mockup}`} alt={work.name} />
               </motion.div>
             </div>
@@ -93,7 +94,7 @@ export default function WorksSingle({ single, works }) {
             </div>
 
             <div className="container-fluid">
-              <div className="mockup-design">
+              <div className="mockup-design eat-light">
                 {/* <Image layout="fill" src=`${process.env.API}/assets/${work.mockup}` alt={work.name} /> */}
                 <img src={`${process.env.API}/assets/${work.side_image}`} alt={work.name} />
               </div>

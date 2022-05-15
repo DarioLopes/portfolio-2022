@@ -3,7 +3,6 @@ import Button from './Button'
 import { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import axios from 'axios'
-import Image from 'next/image'
 import Icons from './Icons'
 
 export default function CoverTitle(props) {
@@ -24,11 +23,11 @@ export default function CoverTitle(props) {
     axios.get(`${process.env.API}/items/works/${props.id}?fields=project_skills.skills_id.icon`).then((response) => {
       setSkills(response.data.data.project_skills)
     })
-  }, [props.skills])
+  }, [props.id, props.skills])
 
   useEffect(() => {
     texts.start((i) => params(i))
-  }, [])
+  }, [texts])
 
   return (
     <div className="content-slide">

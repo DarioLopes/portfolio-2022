@@ -35,7 +35,7 @@ const Slider = (props) => {
           {props.works.data.map((work, i) => {
             return (
               <SwiperSlide key={i}>
-                <div className="col-12 flip-card">
+                <div className="col-12 flip-card eat-light">
                   <span className="line"></span>
                   <Atropos
                     className="flip-card-anim"

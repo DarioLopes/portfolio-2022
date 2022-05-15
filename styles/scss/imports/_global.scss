@@ -67,6 +67,7 @@ a {
     border: 1px solid white;
     transition: $anim;
     max-width: 270px;
+    backdrop-filter: blur(40px) saturate(120%) brightness(100%);
 
     span {
       color: white;
@@ -98,7 +99,10 @@ a {
     }
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      // background-color: rgba(255, 255, 255, 0.2);
+
+      background-color: rgb(111 66 193 / 15%);
+      border-color: #6f42c1;
 
       .line {
         transform: scaleY(0);
@@ -139,7 +143,10 @@ h6 {
   background: rgb(255, 255, 255);
   pointer-events: none;
   z-index: 1000;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 33%, rgba(255, 255, 255, 0) 66%);
+  //White
+  // background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 33%, rgba(255, 255, 255, 0) 66%);
+  // Purple
+  background: radial-gradient(circle, rgb(111 66 193 / 50%) 0%, rgba(111, 66, 193, 0.31) 16%, rgba(255, 255, 255, 0) 66%);
 }
 
 .light-container {
@@ -535,8 +542,8 @@ h6 {
     transition: border 0.3s ease-out, background-color 0.3s ease-out;
 
     &:hover {
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgb(111 66 193 / 15%);
+      border-color: #6f42c1;
     }
   }
 
@@ -577,7 +584,7 @@ h6 {
         display: block;
         position: relative;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgb(111 66 193 / 33%);
         backdrop-filter: blur(15px) saturate(1.5);
         border-radius: 50px;
         padding: 23px 0;

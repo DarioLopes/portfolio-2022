@@ -22,7 +22,7 @@ const Icons = (props) => {
     <div className="svg-container">
       {props.skills.map((skill, i) => (
         <motion.span key={`${i}-${skill.skills_id.icon}`} custom={i} animate={controlsIcon} className="icon-container">
-          <img src={`${process.env.API}/assets/${skill.skills_id.icon}.svg`} />
+          <img src={`${process.env.API}/assets/${skill.skills_id.icon}.svg`} alt="{skill.skill}" />
         </motion.span>
       ))}
     </div>

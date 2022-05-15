@@ -100,6 +100,8 @@ a.button {
   border: 1px solid white;
   transition: all 0.6s ease;
   max-width: 270px;
+  -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(100%);
+          backdrop-filter: blur(40px) saturate(120%) brightness(100%);
 }
 a.button span {
   color: white;
@@ -127,7 +129,8 @@ a.button.has-line .line {
   transition: all 0.6s ease;
 }
 a.button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(111, 66, 193, 0.15);
+  border-color: #6f42c1;
 }
 a.button:hover .line {
   transform: scaleY(0);
@@ -165,7 +168,7 @@ h6 {
   background: rgb(255, 255, 255);
   pointer-events: none;
   z-index: 1000;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 33%, rgba(255, 255, 255, 0) 66%);
+  background: radial-gradient(circle, rgba(111, 66, 193, 0.5) 0%, rgba(111, 66, 193, 0.31) 16%, rgba(255, 255, 255, 0) 66%);
 }
 
 .light-container.smaller .light {
@@ -522,8 +525,8 @@ h6 {
   transition: border 0.3s ease-out, background-color 0.3s ease-out;
 }
 .flip-card a:hover {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(111, 66, 193, 0.15);
+  border-color: #6f42c1;
 }
 .flip-card-wrapper {
   position: relative;
@@ -563,7 +566,7 @@ h6 {
   display: block;
   position: relative;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(111, 66, 193, 0.33);
   -webkit-backdrop-filter: blur(15px) saturate(1.5);
           backdrop-filter: blur(15px) saturate(1.5);
   border-radius: 50px;
@@ -1054,6 +1057,7 @@ header ul li:last-child a::before {
   height: 100vh;
   top: 0;
   left: 0;
+  z-index: -10;
 }
 .single-work .bg-container .bg {
   position: absolute;
