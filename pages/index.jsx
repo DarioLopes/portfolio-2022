@@ -3,6 +3,8 @@ import Button from '../components/Button'
 import Head from '../components/Head'
 import Letters from '../components/Letters'
 import { motion, useAnimation } from 'framer-motion'
+import Image from 'next/image'
+import Background from '../components/Background'
 
 const Home = () => {
   const controls = useAnimation()
@@ -37,6 +39,8 @@ const Home = () => {
   return (
     <Main>
       <Head />
+      <Background />
+
       <div className="home-container">
         <div className="title-container">
           <div className="pretitle">
@@ -84,7 +88,7 @@ const Home = () => {
         <div className="button-container">
           <motion.span custom={8} animate={controls}>
             <Button href="/works" line>
-              Watch my Works
+              My Works
             </Button>
           </motion.span>
 
@@ -94,7 +98,7 @@ const Home = () => {
 
           <motion.span custom={10} animate={controls}>
             <Button href="/skills" transparent>
-              Check my skills
+              My skills
             </Button>
           </motion.span>
         </div>

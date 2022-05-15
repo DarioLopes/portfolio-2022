@@ -22,16 +22,32 @@
       }
     }
   }
+
   .card-skill {
     display: block;
-    padding: 25px 40px 25px 0;
     line-height: 2.25;
-    img {
-      margin-bottom: 30px;
+    padding: 25px 0;
+
+    @media (min-width: 992px) {
+      padding: 25px 40px 25px 0;
     }
-    .subtitle {
-      margin-left: 0;
-      margin-bottom: 15px;
+
+    &-wrapper {
+      padding: 25px;
+      border-radius: $radius;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(40px) saturate(120%) brightness(100%);
+
+      img {
+        margin-bottom: 30px;
+      }
+
+      .subtitle {
+        font-size: 1em;
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
     }
   }
 }

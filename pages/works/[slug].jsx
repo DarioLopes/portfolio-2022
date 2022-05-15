@@ -6,6 +6,7 @@ import Title from '../../components/Title'
 import Head from '../../components/Head'
 import Image from 'next/image'
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
+import Background from '../../components/Background'
 
 const pageTransitions = {
   // Animations à l'entrée et à la sortie de la page
@@ -67,11 +68,7 @@ export default function WorksSingle({ single, works }) {
       <AnimatePresence>
         <motion.div key={work.slug} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={pageTransitions}>
           <Main expendTo={`single-work full ${work.slug}`}>
-            <div className="bg-container">
-              <motion.span className="bg">
-                <Image layout="fill" src={`${process.env.API}/assets/${work.cover}`} priority="true" style={{ opacity: 0.3 }} alt={work.name} />
-              </motion.span>
-            </div>
+            <Background src={`${process.env.API}/assets/${work.cover}`} alt={work.name} />
 
             <div className="container-fluid">
               <Title slug={work.slug} id={work.id} subtitle={work.content_title}>

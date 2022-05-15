@@ -188,6 +188,10 @@
         margin-top: 40px;
       }
 
+      @media (max-width: 575px) {
+        margin-top: 80px;
+      }
+
       @media (max-width: 767px) {
         padding: 0px 20px;
       }
