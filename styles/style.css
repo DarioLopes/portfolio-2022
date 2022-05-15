@@ -984,6 +984,16 @@ header ul li:last-child a::before {
 .page-works .button-container .svg-container svg:last-child {
   margin-right: 0;
 }
+@media (max-height: 919px) {
+  .page-works .button-container .content-wrapper {
+    display: none;
+  }
+}
+@media (min-height: 920px) {
+  .page-works .button-container .content-wrapper {
+    display: block;
+  }
+}
 .page-works .bg {
   position: absolute;
   width: 100vw;
@@ -1083,20 +1093,13 @@ header ul li:last-child a::before {
     margin-right: 0;
   }
 }
-@media (max-height: 919px) {
-  .single-work .button-container .content-wrapper {
-    display: none;
-  }
-}
-@media (min-height: 920px) {
-  .single-work .button-container .content-wrapper {
-    display: block;
-  }
+.single-work .button-container .content-wrapper {
+  display: block;
 }
 .single-work .mockup-design {
   display: block;
   width: 100%;
-  margin: auto;
+  margin: 0 auto 40px;
   padding: 0px 15px;
 }
 @media (min-width: 992px) {

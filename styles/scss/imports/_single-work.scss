@@ -47,20 +47,14 @@
     }
 
     .content-wrapper {
-      @media (max-height: 919px) {
-        display: none;
-      }
-
-      @media (min-height: 920px) {
-        display: block;
-      }
+      display: block;
     }
   }
 
   .mockup-design {
     display: block;
     width: 100%;
-    margin: auto;
+    margin: 0 auto 40px;
     padding: 0px 15px;
 
     @media (min-width: 992px) {
