@@ -10,13 +10,13 @@ const Icons = (props) => {
     transition: {
       duration: 1,
       ease: 'easeOut',
-      delay: (i + 50) * 0.05,
+      delay: (i + 0) * 0.05,
     },
   })
 
   useEffect(() => {
     controlsIcon.start((i) => paramsIcon(i))
-  }, [])
+  })
 
   return (
     <div className="svg-container">

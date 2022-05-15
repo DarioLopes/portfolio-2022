@@ -1,7 +1,11 @@
 .single-work {
   .main-title {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 20px;
+
+    @media (min-width: 576px) {
+      margin-top: 80px;
+    }
   }
 
   .button-container {
@@ -15,17 +19,29 @@
 
     .svg-container {
       display: flex;
+      flex-wrap: wrap; // for break to work
       justify-content: center;
       align-items: center;
-      margin: 45px auto 40px;
+      margin: 75px auto 40px;
+
+      @media (max-width: 575px) {
+        padding: 0 40px;
+        margin: 45px auto 0px;
+
+        .icon-container {
+          margin-bottom: 10px;
+        }
+      }
 
       > span,
       svg {
         display: block;
         margin-right: 10px;
 
-        &:last-child {
-          margin-right: 0;
+        @media (min-width: 576px) {
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }
@@ -38,7 +54,7 @@
     padding: 0px 15px;
 
     @media (min-width: 992px) {
-      max-width: 84.666666%;
+      max-width: 83.333333%;
       padding: 0;
     }
 

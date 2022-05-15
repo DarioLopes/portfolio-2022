@@ -199,6 +199,7 @@
 
     .svg-container {
       display: flex;
+      flex-wrap: wrap; //for break to work
       justify-content: center;
       align-items: center;
       margin: 45px auto 90px;

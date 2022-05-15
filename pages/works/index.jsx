@@ -14,6 +14,7 @@ export default function Works(works) {
   const [title] = useState('Works')
   const [position, setPosition] = useState(0)
   const [currentCover, setCurrentCover] = useState(works.data[0])
+  const [delayTitle, setDelayTitle] = useState(15)
   const arrows = useAnimation()
   const totalWorks = works.data.length
   const sliderRef = useRef(null)
@@ -38,9 +39,10 @@ export default function Works(works) {
     sliderRef.current.swiper.slideNext()
   }, [])
 
-  const handleActive = (swiper) => {
-    setPosition(swiper.realIndex)
-    setCurrentCover(works.data[swiper.realIndex])
+  const handleActive = (index) => {
+    setPosition(index)
+    setCurrentCover(works.data[index])
+    if (delayTitle !== 0) setDelayTitle(0)
   }
 
   useEffect(() => {
@@ -50,6 +52,7 @@ export default function Works(works) {
   return (
     <Main>
       <Head title={title} />
+
       <div className="slider-works">
         <div className="slide-title">
           <div className="navigation eat-light">
@@ -60,10 +63,12 @@ export default function Works(works) {
                 <span></span>
               </span>
               <span className="circle"></span>
-            </motion.button>{' '}
+            </motion.button>
+
             <motion.div custom={1} animate={arrows} className="position">
               {position + 1}/{totalWorks}
             </motion.div>
+
             <motion.button custom={2} animate={arrows} className="next eat-light" onClick={handleNext}>
               <span className="arrow">
                 <span></span>
@@ -74,7 +79,15 @@ export default function Works(works) {
             </motion.button>
           </div>
 
-          <Title slug={currentCover.slug} id={currentCover.id} skills={currentCover.project_skills} button={true}>
+          <Title
+            slug={currentCover.slug}
+            id={currentCover.id}
+            skills={currentCover.project_skills}
+            content={currentCover.content}
+            subtitle={currentCover.content_title}
+            button={true}
+            delayTitle={delayTitle}
+          >
             {currentCover.name}
           </Title>
         </div>
@@ -88,8 +101,7 @@ export default function Works(works) {
           navigation
           pagination={{ clickable: true }}
           effect="fade"
-          // onSwiper={(swiper) => console.log(swiper)}
-          onRealIndexChange={(swiper) => handleActive(swiper)}
+          onRealIndexChange={(swiper) => handleActive(swiper.realIndex)}
         >
           {works.data.map((work, i) => {
             return (

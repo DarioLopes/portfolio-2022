@@ -4,7 +4,7 @@ const Background = (props) => {
   return (
     <div className="bg-container-main">
       <span className="bg">
-        <Image layout="fill" src={props.src ? props.src : '/img/bg-skill.jpg'} priority="true" alt={props.alt ? props.alt : 'Background image'} />
+        <Image layout="fill" src={props.src ? props.src : '/img/bg-skill.jpg'} alt={props.alt ? props.alt : 'Background image'} priority="true" />
       </span>
     </div>
   )

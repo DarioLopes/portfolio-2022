@@ -39,7 +39,6 @@ const Home = () => {
   return (
     <Main>
       <Head />
-      <Background />
 
       <div className="home-container">
         <div className="title-container">
@@ -88,7 +87,7 @@ const Home = () => {
         <div className="button-container">
           <motion.span custom={8} animate={controls}>
             <Button href="/works" line>
-              My Works
+              Check my works
             </Button>
           </motion.span>
 
@@ -98,7 +97,7 @@ const Home = () => {
 
           <motion.span custom={10} animate={controls}>
             <Button href="/skills" transparent>
-              My skills
+              Check my skills
             </Button>
           </motion.span>
         </div>

@@ -86,7 +86,7 @@ a.button {
   padding: 20px 15px;
   border-radius: 40px;
   text-align: center;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.6s ease;
   max-width: 270px;
   -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(100%);
@@ -652,6 +652,14 @@ h6 {
   text-transform: uppercase;
   opacity: 0;
 }
+.button-container .content-wrapper {
+  width: 100%;
+  margin-top: 60px;
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.15em;
+  padding: 0 15px;
+}
 
 .line {
   display: block;
@@ -946,6 +954,7 @@ header ul li:last-child a::before {
 }
 .page-works .button-container .svg-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 45px auto 90px;
@@ -1024,7 +1033,12 @@ header ul li:last-child a::before {
 
 .single-work .main-title {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 20px;
+}
+@media (min-width: 576px) {
+  .single-work .main-title {
+    margin-top: 80px;
+  }
 }
 .single-work .button-container {
   margin-top: 20px;
@@ -1038,18 +1052,30 @@ header ul li:last-child a::before {
 }
 .single-work .button-container .svg-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 45px auto 40px;
+  margin: 75px auto 40px;
+}
+@media (max-width: 575px) {
+  .single-work .button-container .svg-container {
+    padding: 0 40px;
+    margin: 45px auto 0px;
+  }
+  .single-work .button-container .svg-container .icon-container {
+    margin-bottom: 10px;
+  }
 }
 .single-work .button-container .svg-container > span,
 .single-work .button-container .svg-container svg {
   display: block;
   margin-right: 10px;
 }
-.single-work .button-container .svg-container > span:last-child,
+@media (min-width: 576px) {
+  .single-work .button-container .svg-container > span:last-child,
 .single-work .button-container .svg-container svg:last-child {
-  margin-right: 0;
+    margin-right: 0;
+  }
 }
 .single-work .mockup-design {
   display: block;
@@ -1059,7 +1085,7 @@ header ul li:last-child a::before {
 }
 @media (min-width: 992px) {
   .single-work .mockup-design {
-    max-width: 84.666666%;
+    max-width: 83.333333%;
     padding: 0;
   }
 }
@@ -1132,13 +1158,16 @@ header ul li:last-child a::before {
   }
 }
 
+.page-skills {
+  padding-bottom: 180px;
+}
 @media (min-width: 992px) {
   .page-skills {
     width: 66.666666%;
   }
 }
 .page-skills .main-title {
-  margin: 0 auto;
+  margin: 30px auto 45px;
 }
 .page-skills .main-title .title {
   display: table;
@@ -1154,6 +1183,7 @@ header ul li:last-child a::before {
   overflow: initial;
 }
 .page-skills .card-skill {
+  position: relative;
   display: block;
   line-height: 2.25;
   padding: 25px 0;
@@ -1163,7 +1193,14 @@ header ul li:last-child a::before {
     padding: 25px 40px 25px 0;
   }
 }
+@media (min-width: 1920px) {
+  .page-skills .card-skill {
+    width: 25%;
+  }
+}
 .page-skills .card-skill-wrapper {
+  position: relative;
+  height: 100%;
   padding: 25px;
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1171,17 +1208,24 @@ header ul li:last-child a::before {
   -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(100%);
           backdrop-filter: blur(40px) saturate(120%) brightness(100%);
 }
-.page-skills .card-skill-wrapper img {
-  margin-bottom: 30px;
+.page-skills .card-skill-wrapper > span {
+  display: block;
+  margin-bottom: 20px !important;
 }
 .page-skills .card-skill-wrapper .subtitle {
   font-size: 1em;
   margin-left: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.page-skills .card-skill-wrapper p {
+  margin-bottom: 0;
 }
 
 .page-about .main-title {
-  margin: 0 auto;
+  margin: 30px auto 45px;
 }
 .page-about .main-title .title {
   display: table;
@@ -1203,4 +1247,4 @@ header ul li:last-child a::before {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+}/*# sourceMappingURL=style.css.map */

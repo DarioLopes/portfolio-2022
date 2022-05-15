@@ -5,6 +5,7 @@ import Lines from '../components/Lines'
 import Light from '../components/Light'
 import Header from '../components/Header'
 import { AnimatePresence, motion } from 'framer-motion'
+import Background from '../components/Background'
 
 const pageTransitions = {
   // Animations à l'entrée et à la sortie de la page
@@ -59,6 +60,7 @@ const LineTransitions = {
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
+      <Background />
       <AnimatePresence>
         <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={LineTransitions}>
           <Lines />

@@ -3,8 +3,10 @@
     width: 66.666666%;
   }
 
+  padding-bottom: 180px;
+
   .main-title {
-    margin: 0 auto;
+    margin: 30px auto 45px;
 
     .title {
       display: table;
@@ -24,6 +26,7 @@
   }
 
   .card-skill {
+    position: relative;
     display: block;
     line-height: 2.25;
     padding: 25px 0;
@@ -32,21 +35,35 @@
       padding: 25px 40px 25px 0;
     }
 
+    @media (min-width: 1920px) {
+      width: 25%;
+    }
+
     &-wrapper {
+      position: relative;
+      height: 100%;
       padding: 25px;
       border-radius: $radius;
       border: 1px solid rgba(255, 255, 255, 0.2);
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(40px) saturate(120%) brightness(100%);
 
-      img {
-        margin-bottom: 30px;
+      > span {
+        display: block;
+        margin-bottom: 20px !important;
       }
 
       .subtitle {
         font-size: 1em;
         margin-left: 0;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      p {
+        margin-bottom: 0;
       }
     }
   }

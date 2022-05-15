@@ -4,11 +4,10 @@ import Main from '../../components/Main'
 import Slider from '../../components/Slider'
 import Title from '../../components/Title'
 import Head from '../../components/Head'
-import Image from 'next/image'
-import { motion, AnimatePresence, useAnimation } from 'framer-motion'
 import Background from '../../components/Background'
+import { motion, AnimatePresence, useAnimation } from 'framer-motion'
 
-const pageTransitions = {
+const contentTransitions = {
   // Animations à l'entrée et à la sortie de la page
   pageInitial: {
     opacity: 0,
@@ -53,25 +52,16 @@ export default function WorksSingle({ single, works }) {
     }))
   })
 
-  //* console.log(work.content) // "<p> bla...bla...bla </p>"
-  //* console.log(work.content_title) // Beaucartel is an audio...
-  //* console.log(work.cover)
-  //* console.log(work.id) // 6
-  //* console.log(work.name) // Beaucartel
-  //* console.log(work.project_skills) // [1,6,7,13]
-  //* console.log(work.side_image)
-  //* console.log(work.slug) // slug-project
-
   return (
     <>
       <Head title={`Work - ${work.name}`} />
       <AnimatePresence>
-        <motion.div key={work.slug} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={pageTransitions}>
+        <motion.div key={work.slug} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={contentTransitions}>
           <Main expendTo={`single-work full ${work.slug}`}>
             <Background src={`${process.env.API}/assets/${work.cover}`} alt={work.name} />
 
             <div className="container-fluid">
-              <Title slug={work.slug} id={work.id} subtitle={work.content_title}>
+              <Title slug={work.slug} id={work.id} subtitle={work.content_title} content={work.content} delayTitle={15}>
                 {work.name}
               </Title>
               <motion.div className="mockup-design eat-light" animate={cover}>
@@ -79,23 +69,14 @@ export default function WorksSingle({ single, works }) {
               </motion.div>
             </div>
 
-            <div className="container datas-container">
-              <div className="row">
-                <div className="col-12 col-lg-6">
-                  <div className="subtitle" style={{ opacity: 1, fontWeight: '400' }}>
-                    <p>The Challenge</p>
-                  </div>
-                  <div className="p-container" dangerouslySetInnerHTML={{ __html: work.content }} />
+            {work?.side_image ? (
+              <div className="container-fluid">
+                <div className="mockup-design eat-light">
+                  {/* <Image layout="fill" src=`${process.env.API}/assets/${work.mockup}` alt={work.name} /> */}
+                  <img src={`${process.env.API}/assets/${work.side_image}`} alt={work.name} />
                 </div>
               </div>
-            </div>
-
-            <div className="container-fluid">
-              <div className="mockup-design eat-light">
-                {/* <Image layout="fill" src=`${process.env.API}/assets/${work.mockup}` alt={work.name} /> */}
-                <img src={`${process.env.API}/assets/${work.side_image}`} alt={work.name} />
-              </div>
-            </div>
+            ) : null}
           </Main>
           <Slider works={works} currentWork={work.id} cssClass="single-work" />
         </motion.div>

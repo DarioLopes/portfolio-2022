@@ -33,24 +33,28 @@ export default function CoverTitle(props) {
     <div className="content-slide">
       <div className="main-title">
         <h1 className="title">
-          <Letters text={props.children} custom={0} delay={15} />
+          <Letters text={props.children} custom={0} delay={props.delayTitle} />
         </h1>
         <span className="line" />
       </div>
 
       <div className="button-container">
         <motion.span custom={1} animate={texts} className="subtitle">
-          {props.subtitle && props.subtitle.length ? props.subtitle : 'Designed & Developed with'}
+          {props.subtitle}
         </motion.span>
 
-        <motion.span custom={2} animate={texts} className="icons-container">
+        <motion.span custom={2} animate={texts} className="content">
+          <div className="p-container content-wrapper" dangerouslySetInnerHTML={{ __html: props.content }} />
+        </motion.span>
+
+        <motion.span custom={3} animate={texts} className="icons-container">
           <Icons skills={skills} />
         </motion.span>
 
         {props?.button && props.button === true ? (
-          <motion.span custom={3} animate={texts}>
+          <motion.span custom={4} animate={texts}>
             <Button href={`/works/${props.slug}`} line>
-              See more
+              See sketch
             </Button>
           </motion.span>
         ) : null}

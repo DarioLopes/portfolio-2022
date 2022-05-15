@@ -1,5 +1,5 @@
 {
-  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.includeItems": ["/styles/scss/*.scss"],
   "liveSassCompile.settings.formats": [
     // This is the default.

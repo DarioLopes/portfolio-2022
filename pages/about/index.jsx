@@ -13,7 +13,7 @@ export default function About() {
         <div className="row">
           <div className="col-12 main-title">
             <h1 className="title">
-              <Letters text={title} anim={'letters'} delay={40} />
+              <Letters text={title} anim={'letters'} delay={15} />
             </h1>
           </div>
         </div>
