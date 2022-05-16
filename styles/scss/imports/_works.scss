@@ -1,9 +1,13 @@
 .page-works {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 576px) {
+    min-height: calc(100vh - 80px); //80 => header height
+  }
 
   .slide-title {
     position: fixed;
@@ -12,10 +16,15 @@
     top: 0;
     left: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     z-index: 9;
+    padding-top: 120px;
+
+    @media (min-width: 576px) {
+      justify-content: center;
+      padding-top: 0;
+    }
   }
 
   .slider-works {
@@ -39,8 +48,12 @@
 
   .swiper {
     height: 100vh;
-    margin-top: -80px;
+    margin-top: -60px;
     overflow: hidden;
+
+    @media (min-width: 576px) {
+      margin-top: -80px;
+    }
 
     .swiper-slide {
       display: flex;
