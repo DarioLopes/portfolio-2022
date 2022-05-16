@@ -119,6 +119,9 @@ h6 {
 }
 
 #__next {
+  background: $color1 !important;
+  background: radial-gradient(circle, $color2 0%, $color1 100%) !important;
+
   &::after {
     content: '';
     display: block;
@@ -128,11 +131,18 @@ h6 {
     top: 0;
     left: 0;
     background: transparent url('/img/noise.webp') center/auto repeat;
-    z-index: -1;
+    z-index: 0;
+  }
+
+  > div {
+    z-index: 2;
+    position: relative;
   }
 }
 
 .bg-container-main {
+  position: relative;
+  z-index: 1;
   .bg {
     position: fixed;
     width: 100vw;

@@ -61,6 +61,7 @@ const LineTransitions = {
 function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     document.body.style.backgroundColor = '#0f0b23'
+    document.getElementById('__next').style.backgroundColor = '#0f0b23'
   }, [])
 
   return (
