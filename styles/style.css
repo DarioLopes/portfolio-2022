@@ -45,8 +45,8 @@ body {
 
 body {
   position: relative;
-  background: #0f0b23;
-  background: radial-gradient(circle, #161032 0%, #0f0b23 100%);
+  background: #0f0b23 !important;
+  background: radial-gradient(circle, #161032 0%, #0f0b23 100%) !important;
   font-family: "Circular", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -1209,7 +1209,7 @@ header ul li:last-child a::before {
 }
 @media (min-width: 992px) {
   .page-skills .card-skill {
-    padding: 25px 40px 25px 0;
+    padding: 25px;
   }
 }
 @media (min-width: 1920px) {

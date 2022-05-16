@@ -6,6 +6,7 @@ import Light from '../components/Light'
 import Header from '../components/Header'
 import { AnimatePresence, motion } from 'framer-motion'
 import Background from '../components/Background'
+import { useEffect } from 'react'
 
 const pageTransitions = {
   // Animations à l'entrée et à la sortie de la page
@@ -58,6 +59,10 @@ const LineTransitions = {
 }
 
 function MyApp({ Component, pageProps, router }) {
+  useEffect(() => {
+    document.body.style.backgroundColor = '#0f0b23'
+  }, [])
+
   return (
     <>
       <Background />
