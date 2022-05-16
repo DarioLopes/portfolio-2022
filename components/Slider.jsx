@@ -25,7 +25,7 @@ const Slider = (props) => {
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={0}
-          slidesPerView={width < 768 ? 1 : width < 992 ? 2 : width < 1200 ? 3 : width < 1921 ? 5 : 6}
+          slidesPerView={width < 576 ? 1 : width < 768 ? 2 : width < 1200 ? 3 : width < 1921 ? 5 : 6}
           loop={true}
           navigation
           pagination={{ clickable: true }}

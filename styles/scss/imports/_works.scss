@@ -6,7 +6,7 @@
   align-items: center;
 
   @media (min-width: 576px) {
-    min-height: calc(100vh - 80px); //80 => header height
+    height: calc(100vh - 80px); //80 => header height
   }
 
   .slide-title {

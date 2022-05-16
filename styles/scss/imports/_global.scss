@@ -131,7 +131,7 @@ h6 {
     top: 0;
     left: 0;
     background: transparent url('/img/noise.webp') center/auto repeat;
-    z-index: 0;
+    z-index: 1;
   }
 
   > div {
@@ -143,6 +143,7 @@ h6 {
 .bg-container-main {
   position: relative;
   z-index: 1;
+
   .bg {
     position: fixed;
     width: 100vw;

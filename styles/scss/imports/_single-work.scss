@@ -127,16 +127,22 @@
   }
 
   .swiper {
-    @media (max-width: 575px) {
-      padding: 0 10%;
-    }
-  }
+    padding: 0 10%;
 
-  .swiper-wrapper {
-    margin-bottom: 180px;
+    @media (min-width: 576px) {
+      padding: 0 4%;
+    }
 
     @media (min-width: 1920px) {
-      padding: 0 25%;
+      padding: 0;
+    }
+
+    .swiper-wrapper {
+      margin-bottom: 180px;
+
+      @media (min-width: 1920px) {
+        padding: 0 8.333333%;
+      }
     }
   }
 }
