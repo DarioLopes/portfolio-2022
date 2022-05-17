@@ -64,7 +64,7 @@ a {
     }
 
     &.transparent {
-      background-color: transparent;
+      background-color: rgba(255, 255, 255, 0);
       border-color: transparent;
       backdrop-filter: none;
 
@@ -212,7 +212,7 @@ h6 {
   width: 100%;
   max-width: 2560px;
   height: 100vh;
-  transition: all 2s ease-out 1s;
+  transition: all 2s ease-out 1.7s;
   transform-origin: center;
   opacity: 0;
   transform: scaleX(0.5);

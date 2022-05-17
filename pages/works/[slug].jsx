@@ -61,12 +61,21 @@ export default function WorksSingle({ single, works }) {
             <Background src={`${process.env.API}/assets/${work.cover}`} alt={work.name} />
 
             <div className="container-fluid">
-              <Title slug={work.slug} id={work.id} subtitle={work.content_title} content={work.content} delayTitle={15}>
-                {work.name}
-              </Title>
-              <motion.div className="mockup-design eat-light" animate={cover}>
-                <img src={`${process.env.API}/assets/${work.mockup}`} alt={work.name} />
-              </motion.div>
+              <div className="row">
+                <div className="col-12">
+                  <Title slug={work.slug} id={work.id} subtitle={work.content_title} content={work.content} delayTitle={15}>
+                    {work.name}
+                  </Title>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-12">
+                  <motion.div className="mockup-design eat-light" animate={cover}>
+                    <img src={`${process.env.API}/assets/${work.mockup}`} alt={work.name} />
+                  </motion.div>
+                </div>
+              </div>
             </div>
           </Main>
           <Slider works={works} currentWork={work.id} cssClass="single-work" />

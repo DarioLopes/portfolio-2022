@@ -29,8 +29,6 @@ const Slider = (props) => {
           loop={true}
           navigation
           pagination={{ clickable: true }}
-          // onSwiper={(swiper) => console.log(swiper)}
-          // onSlideChange={() => console.log("slide change")}
         >
           {props.works.data.map((work, i) => {
             return work.id !== props?.currentWork ? (
