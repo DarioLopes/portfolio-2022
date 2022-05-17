@@ -37,7 +37,7 @@ const Letters = (props) => {
 
     letters.start((i) => lettersOpacity(i))
     letters.start((i) => lettersAnim(i))
-  })
+  }, [text, props.text, customLettersAnim, letters, lettersAnim])
 
   return (
     <span aria-label={text} role={text} className="title-anim">
