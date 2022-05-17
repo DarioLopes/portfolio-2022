@@ -39,6 +39,7 @@
       display: block;
       max-width: 100vw;
     }
+
     .title {
       display: table;
       opacity: 1;
@@ -215,7 +216,7 @@
       flex-wrap: wrap; //for break to work
       justify-content: center;
       align-items: center;
-      margin: 45px auto 90px;
+      margin: 60px auto;
 
       > span,
       svg {
@@ -239,6 +240,9 @@
     }
 
     .content-wrapper {
+      margin-bottom: 60px;
+      margin-top: 0;
+
       @media (max-height: 919px) {
         display: none;
       }

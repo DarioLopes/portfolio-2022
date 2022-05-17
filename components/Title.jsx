@@ -43,12 +43,12 @@ export default function CoverTitle(props) {
           {props.subtitle}
         </motion.span>
 
-        <motion.span custom={2} animate={texts} className="content">
-          <div className="p-container content-wrapper" dangerouslySetInnerHTML={{ __html: props.content }} />
-        </motion.span>
-
         <motion.span custom={3} animate={texts} className="icons-container">
           <Icons skills={skills} />
+        </motion.span>
+
+        <motion.span custom={2} animate={texts} className="content">
+          <div className="p-container content-wrapper" dangerouslySetInnerHTML={{ __html: props.content }} />
         </motion.span>
 
         {props?.button && props.button === true ? (

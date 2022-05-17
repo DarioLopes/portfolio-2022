@@ -61,7 +61,7 @@ const Letters = (props) => {
             animate={customLettersAnim}
             aria-hidden="true"
             key={props.text + index}
-            style={{ opacity: 0, backgroundImage: "url('/img/gold.jpg')" }}
+            style={{ opacity: 0 }}
             className={`${letter === ' ' ? 'letter-single space' : 'letter-single'}`}
           >
             {letter}

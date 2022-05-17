@@ -1042,7 +1042,7 @@ header ul li:last-child a::before {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 45px auto 90px;
+  margin: 60px auto;
 }
 .page-works .button-container .svg-container > span,
 .page-works .button-container .svg-container svg {
@@ -1062,6 +1062,10 @@ header ul li:last-child a::before {
 .page-works .button-container .svg-container > span:last-child,
 .page-works .button-container .svg-container svg:last-child {
   margin-right: 0;
+}
+.page-works .button-container .content-wrapper {
+  margin-bottom: 60px;
+  margin-top: 0;
 }
 @media (max-height: 919px) {
   .page-works .button-container .content-wrapper {
