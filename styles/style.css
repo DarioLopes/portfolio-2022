@@ -1330,6 +1330,9 @@ header ul li:last-child a::before {
   margin-bottom: 0;
 }
 
+.page-about {
+  padding-bottom: 180px;
+}
 .page-about .main-title {
   margin: 30px auto 45px;
 }
@@ -1384,7 +1387,7 @@ header ul li:last-child a::before {
 @media (min-width: 992px) {
   .page-about .big-card-about-container .big-card-about-counter, .page-about .big-card-about-container .big-card-about-content {
     height: 100%;
-    padding: 40px;
+    padding: 70px;
   }
 }
 .page-about .big-card-about-container .big-card-about-counter {
@@ -1512,7 +1515,7 @@ header ul li:last-child a::before {
 .page-about .big-card-about-container .big-card-about-content .content-wrapper a {
   color: #ffb400;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1720px) {
   .page-about .big-card-about-container .big-card-about-content .button-container {
     flex-direction: row;
     justify-content: flex-start;

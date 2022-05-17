@@ -1,4 +1,6 @@
 .page-about {
+  padding-bottom: 180px;
+
   .main-title {
     margin: 30px auto 45px;
 
@@ -56,7 +58,7 @@
 
         @media (min-width: 992px) {
           height: 100%;
-          padding: 40px;
+          padding: 70px;
         }
       }
 
@@ -193,7 +195,7 @@
         }
 
         .button-container {
-          @media (min-width: 1200px) {
+          @media (min-width: 1720px) {
             flex-direction: row;
             justify-content: flex-start;
 
