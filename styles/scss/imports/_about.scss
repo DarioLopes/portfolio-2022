@@ -189,8 +189,12 @@
         .content-wrapper {
           margin-top: 30px;
 
-          a {
-            color: $color4;
+          p {
+            line-height: 2.4;
+
+            a {
+              color: $color4;
+            }
           }
         }
 
@@ -208,11 +212,6 @@
             a {
               padding-left: 60px;
               padding-right: 60px;
-
-              &:hover {
-                background-color: rgb(255 180 0 / 15%);
-                border-color: rgb(255 180 0 / 40%);
-              }
             }
 
             > span {

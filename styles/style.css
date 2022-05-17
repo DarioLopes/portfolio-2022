@@ -1512,7 +1512,10 @@ header ul li:last-child a::before {
 .page-about .big-card-about-container .big-card-about-content .content-wrapper {
   margin-top: 30px;
 }
-.page-about .big-card-about-container .big-card-about-content .content-wrapper a {
+.page-about .big-card-about-container .big-card-about-content .content-wrapper p {
+  line-height: 2.4;
+}
+.page-about .big-card-about-container .big-card-about-content .content-wrapper p a {
   color: #ffb400;
 }
 @media (min-width: 1720px) {
@@ -1528,10 +1531,6 @@ header ul li:last-child a::before {
   .page-about .big-card-about-container .big-card-about-content .button-container a {
     padding-left: 60px;
     padding-right: 60px;
-  }
-  .page-about .big-card-about-container .big-card-about-content .button-container a:hover {
-    background-color: rgba(255, 180, 0, 0.15);
-    border-color: rgba(255, 180, 0, 0.4);
   }
   .page-about .big-card-about-container .big-card-about-content .button-container > span {
     display: block;
