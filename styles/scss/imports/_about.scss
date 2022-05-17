@@ -204,6 +204,8 @@
         }
 
         .button-container {
+          margin-top: 50px;
+
           @media (min-width: 1720px) {
             flex-direction: row;
             justify-content: flex-start;

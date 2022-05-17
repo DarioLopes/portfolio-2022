@@ -8,7 +8,7 @@ const Lines = () => {
   }, [{ loading }])
 
   return (
-    <div className={`container-fluid lines ${!loading ? 'css-anim' : null}`}>
+    <div className={`container-fluid lines ${!loading ? 'css-anim' : null}`} style={{ opacity: 0 }}>
       <div className="row">
         <div className="col"></div>
         <div className="col"></div>

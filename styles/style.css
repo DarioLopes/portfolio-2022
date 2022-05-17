@@ -250,7 +250,7 @@ h6 {
   }
 }
 .lines.css-anim {
-  opacity: 0.1;
+  opacity: 0.1 !important;
   transform: scaleX(1);
 }
 
@@ -1521,6 +1521,9 @@ header ul li:last-child a::before {
 }
 .page-about .big-card-about-container .big-card-about-content .content-wrapper p a:hover {
   color: #1b998b;
+}
+.page-about .big-card-about-container .big-card-about-content .button-container {
+  margin-top: 50px;
 }
 @media (min-width: 1720px) {
   .page-about .big-card-about-container .big-card-about-content .button-container {
