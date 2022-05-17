@@ -39,7 +39,7 @@ export default function About(about) {
           <motion.div custom={0} animate={controls} className="big-card-about">
             <div className="big-card-about-counter">
               {about.data?.points.map((point, i) => (
-                <motion.div className="counter" custom={i} animate={controls}>
+                <motion.div key={i} className="counter" custom={i} animate={controls}>
                   <div className="counter-title">{point.years}</div>
                   <span className="counter-content">{point.experience}</span>
                 </motion.div>
