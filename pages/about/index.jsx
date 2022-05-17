@@ -79,7 +79,7 @@ export default function About(about) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const about = await getAbout()
   return {
     props: about,

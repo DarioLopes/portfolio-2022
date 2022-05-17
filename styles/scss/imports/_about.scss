@@ -151,6 +151,7 @@
           &-title {
             font-size: 2em;
             font-weight: 400;
+            opacity: 0.7;
 
             @media (min-width: 576px) {
               font-size: 3.75em;
@@ -194,6 +195,10 @@
 
             a {
               color: $color4;
+
+              &:hover {
+                color: $color6;
+              }
             }
           }
         }
@@ -228,8 +233,8 @@
                     background-color: transparent;
                     border-color: transparent;
                     span {
+                      color: $color6;
                       transition: $anim;
-                      color: $color4;
                     }
                   }
                 }

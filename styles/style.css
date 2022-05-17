@@ -1474,6 +1474,7 @@ header ul li:last-child a::before {
 .page-about .big-card-about-container .big-card-about-counter .counter-title {
   font-size: 2em;
   font-weight: 400;
+  opacity: 0.7;
 }
 @media (min-width: 576px) {
   .page-about .big-card-about-container .big-card-about-counter .counter-title {
@@ -1518,6 +1519,9 @@ header ul li:last-child a::before {
 .page-about .big-card-about-container .big-card-about-content .content-wrapper p a {
   color: #ffb400;
 }
+.page-about .big-card-about-container .big-card-about-content .content-wrapper p a:hover {
+  color: #1b998b;
+}
 @media (min-width: 1720px) {
   .page-about .big-card-about-container .big-card-about-content .button-container {
     flex-direction: row;
@@ -1546,8 +1550,8 @@ header ul li:last-child a::before {
     border-color: transparent;
   }
   .page-about .big-card-about-container .big-card-about-content .button-container > span:last-child a:hover span {
+    color: #1b998b;
     transition: all 0.6s ease;
-    color: #ffb400;
   }
 }
 .page-about .big-card-about-container .big-card-about-content .button-container a {
