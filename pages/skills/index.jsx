@@ -22,7 +22,7 @@ export default function Skills(skills) {
 
   useEffect(() => {
     controls.start((i) => params(i))
-  }, [])
+  }, [controls])
 
   return (
     <Main>

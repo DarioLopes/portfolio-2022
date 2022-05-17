@@ -5,7 +5,7 @@ const Lines = () => {
 
   useEffect(() => {
     setLoading(false)
-  }, [{ loading }])
+  }, [loading])
 
   return (
     <div className={`container-fluid lines ${!loading ? 'css-anim' : null}`} style={{ opacity: 0 }}>

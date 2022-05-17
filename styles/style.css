@@ -475,7 +475,7 @@ h6 {
   opacity: 0;
   display: inline-block;
   transform-origin: center;
-  background-image: url("/img/gold.jpg");
+  background-image: url("/img/gold.webp");
   background-position: 40% 50%;
   background-size: 300% 150%;
   -webkit-background-clip: text;

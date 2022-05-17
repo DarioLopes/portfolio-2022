@@ -494,7 +494,7 @@ h6 {
       display: inline-block;
       transform-origin: center;
       // Gold effect => Background-clip + transform = bug on FF + Chrome -- so putted background here... unfortunetaly
-      background-image: url('/img/gold.jpg');
+      background-image: url('/img/gold.webp');
       background-position: 40% 50%;
       background-size: 300% 150%;
       background-clip: text;
