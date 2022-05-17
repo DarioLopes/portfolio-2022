@@ -48,7 +48,7 @@ export default function About(about) {
 
             <div className="big-card-about-content">
               <motion.span className="subtitle" custom={2} animate={controls}>
-                Hello, I'm Dario
+                {about.data.content_title}
               </motion.span>
               <motion.div className="content-wrapper" custom={3} animate={controls} dangerouslySetInnerHTML={{ __html: about.data.content }} />
 
