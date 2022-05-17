@@ -36,41 +36,43 @@ export default function About(about) {
         </div>
 
         <div className="row">
-          <motion.div custom={0} animate={controls} className="big-card-about">
-            <div className="big-card-about-counter">
-              {about.data?.points.map((point, i) => (
-                <motion.div key={i} className="counter" custom={i} animate={controls}>
-                  <div className="counter-title">{point.years}</div>
-                  <span className="counter-content">{point.experience}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="big-card-about-content">
-              <motion.span className="subtitle" custom={2} animate={controls}>
-                {about.data.content_title}
-              </motion.span>
-              <motion.div className="content-wrapper" custom={3} animate={controls} dangerouslySetInnerHTML={{ __html: about.data.content }} />
-
-              <div className="button-container">
-                <motion.span custom={4} animate={controls}>
-                  <Button href={`mailto:${about.data.email}`} line>
-                    Contact me
-                  </Button>
-                </motion.span>
-
-                <motion.span className="sep" custom={5} animate={controls}>
-                  or
-                </motion.span>
-
-                <motion.span custom={6} animate={controls}>
-                  <Button href={`${process.env.API}/assets/${about.data.CV}`} blank transparent>
-                    Check my resume
-                  </Button>
-                </motion.span>
+          <div className="big-card-about-container">
+            <motion.div custom={0} animate={controls} className="big-card-about">
+              <div className="big-card-about-counter">
+                {about.data?.points.map((point, i) => (
+                  <motion.div key={i} className="counter" custom={i} animate={controls}>
+                    <div className="counter-title">{point.years}</div>
+                    <span className="counter-content">{point.experience}</span>
+                  </motion.div>
+                ))}
               </div>
-            </div>
-          </motion.div>
+
+              <div className="big-card-about-content">
+                <motion.span className="subtitle" custom={2} animate={controls}>
+                  {about.data.content_title}
+                </motion.span>
+                <motion.div className="content-wrapper" custom={3} animate={controls} dangerouslySetInnerHTML={{ __html: about.data.content }} />
+
+                <div className="button-container">
+                  <motion.span custom={4} animate={controls}>
+                    <Button href={`mailto:${about.data.email}`} line>
+                      Contact me
+                    </Button>
+                  </motion.span>
+
+                  <motion.span className="sep" custom={5} animate={controls}>
+                    or
+                  </motion.span>
+
+                  <motion.span custom={6} animate={controls}>
+                    <Button href={`${process.env.API}/assets/${about.data.CV}`} blank transparent>
+                      Check my resume
+                    </Button>
+                  </motion.span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </Main>
