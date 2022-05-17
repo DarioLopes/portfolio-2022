@@ -4,9 +4,12 @@ import '../styles/style.css'
 import Lines from '../components/Lines'
 import Light from '../components/Light'
 import Header from '../components/Header'
-import { AnimatePresence, motion } from 'framer-motion'
 import Background from '../components/Background'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import Github from '../components/Github'
 
 const pageTransitions = {
   // Animations à l'entrée et à la sortie de la page
@@ -72,6 +75,7 @@ function MyApp({ Component, pageProps, router }) {
           <Lines />
         </motion.div>
       </AnimatePresence>
+
       <Light>
         <Header />
         <AnimatePresence>
@@ -79,6 +83,7 @@ function MyApp({ Component, pageProps, router }) {
             <Component {...pageProps} />
           </motion.div>
         </AnimatePresence>
+        <Github />
       </Light>
     </>
   )

@@ -41,7 +41,14 @@ export default function Skills(skills) {
           {skills.data.map((skill, i) => (
             <motion.div key={`${skill.icon}-${skill.id}`} custom={i} animate={controls} className="col-12 col-lg-6 card-skill" style={{ opacity: 0 }}>
               <div className="card-skill-wrapper">
-                <Image src={`${process.env.API}/assets/${skill.icon}.svg`} width="44" height="44" alt={skill.skill} className="img" />
+                <Image
+                  src={`${process.env.API}/assets/${skill.icon}.svg`}
+                  width="44"
+                  height="44"
+                  alt={skill.skill}
+                  className="img"
+                  priority={i < 8 ? true : false}
+                />
                 <h2 className="subtitle" style={{ opacity: 1 }}>
                   {skill.skill}
                 </h2>

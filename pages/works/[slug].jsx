@@ -1,11 +1,12 @@
 import { getWorks, getSingleWorks } from '../../lib/api'
-import { useEffect } from 'react'
 import Main from '../../components/Main'
 import Slider from '../../components/Slider'
 import Title from '../../components/Title'
 import Head from '../../components/Head'
 import Background from '../../components/Background'
+import { useEffect } from 'react'
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
+import Image from 'next/image'
 
 const contentTransitions = {
   // Animations à l'entrée et à la sortie de la page
@@ -72,7 +73,7 @@ export default function WorksSingle({ single, works }) {
               <div className="row">
                 <div className="col-12">
                   <motion.div className="mockup-design eat-light" animate={cover}>
-                    <img src={`${process.env.API}/assets/${work.mockup}`} alt={work.name} />
+                    <Image src={`${process.env.API}/assets/${work.mockup}`} layout="fill" alt={work.name} priority={true} quality={90} />
                   </motion.div>
                 </div>
               </div>

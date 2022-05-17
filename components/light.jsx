@@ -21,7 +21,7 @@ const Light = (props) => {
     })
   }
 
-  const throttleGetMouseMove = useRef(_.throttle(getMouseMove, 33, { trailing: true }))
+  const throttleGetMouseMove = useRef(_.throttle(getMouseMove, 100, { trailing: true }))
 
   const setMouseMove = (e) => {
     throttleGetMouseMove.current(e)

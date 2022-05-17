@@ -10,6 +10,7 @@ const Header = () => {
   const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [links, setLinks] = useState([])
+  const [email, setEmail] = useState([])
   const [scrollY, setScrollY] = useState(0)
   const triggerScrollMenu = 400
   const params = (i) => ({
@@ -26,6 +27,12 @@ const Header = () => {
     // Get & animate
     axios.get(`${process.env.API}/items/pages`).then((response) => {
       setLinks(response.data.data)
+      setLoading(false)
+    })
+
+    // Get & animate
+    axios.get(`${process.env.API}/items/about?fields=email`).then((response) => {
+      setEmail(response.data.data.email)
       setLoading(false)
     })
 
@@ -59,6 +66,14 @@ const Header = () => {
                     </Link>
                   </motion.li>
                 ))}
+
+                <motion.li custom={links.length} animate={controls} className={`menu-item contact-button`} target="_blank">
+                  <Link href={`mailto:${email}`}>
+                    <a>
+                      <span>Contact</span>
+                    </a>
+                  </Link>
+                </motion.li>
               </ul>
             </header>
           </div>

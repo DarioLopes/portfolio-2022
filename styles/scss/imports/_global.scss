@@ -113,6 +113,34 @@ h6 {
   margin-bottom: 0;
 }
 
+a.github-link {
+  display: none;
+
+  @media (min-width: 992px) {
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 8.333333%;
+    display: flex;
+    padding: 15px;
+    opacity: 0.7;
+    transition: $anim;
+
+    span {
+      color: white;
+      margin-left: 7px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 #__next,
 .light-container {
   height: 100%;
@@ -173,38 +201,6 @@ h6 {
   }
 }
 
-.light-container {
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-}
-
-.light {
-  position: absolute;
-  opacity: 0;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
-  display: block;
-  width: 728px;
-  height: 728px;
-  transition: transform 0.1s, opacity 0.6s;
-  background: rgb(255, 255, 255);
-  pointer-events: none;
-  z-index: 1000;
-  //White
-  // background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 33%, rgba(255, 255, 255, 0) 66%);
-  // Purple
-  background: radial-gradient(circle, rgb(111 66 193 / 50%) 0%, rgba(111, 66, 193, 0.31) 16%, rgba(255, 255, 255, 0) 66%);
-}
-
-.light-container {
-  &.smaller {
-    .light {
-      transition: transform 0.2s;
-    }
-  }
-}
-
 .lines {
   position: fixed;
   top: 0;
@@ -214,8 +210,8 @@ h6 {
   height: 100vh;
   transition: all 2s ease-out 1.7s;
   transform-origin: center;
-  opacity: 0;
   transform: scaleX(0.5);
+  opacity: 0;
   z-index: -1;
 
   .col {
@@ -238,9 +234,38 @@ h6 {
   }
 
   &.css-anim {
-    opacity: 0.1 !important;
+    opacity: 1;
     transform: scaleX(1);
   }
+}
+
+.light-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  &.smaller {
+    .light {
+      transition: transform 0.2s;
+    }
+  }
+}
+
+.light {
+  position: absolute;
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  display: block;
+  width: 728px;
+  height: 728px;
+  transition: transform 0.1s, opacity 0.6s;
+  background: rgb(255, 255, 255);
+  pointer-events: none;
+  z-index: 1000;
+  //White
+  // background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 33%, rgba(255, 255, 255, 0) 66%);
+  // Purple
+  background: radial-gradient(circle, rgb(111 66 193 / 50%) 0%, rgba(111, 66, 193, 0.31) 16%, rgba(255, 255, 255, 0) 66%);
 }
 
 .title-container {

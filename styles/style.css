@@ -140,6 +140,33 @@ h6 {
   margin-bottom: 0;
 }
 
+a.github-link {
+  display: none;
+}
+@media (min-width: 992px) {
+  a.github-link {
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 8.333333%;
+    display: flex;
+    padding: 15px;
+    opacity: 0.7;
+    transition: all 0.6s ease;
+  }
+  a.github-link span {
+    color: white;
+    margin-left: 7px;
+  }
+  a.github-link:hover {
+    opacity: 1;
+  }
+}
+
 #__next,
 .light-container {
   height: 100%;
@@ -196,31 +223,6 @@ h6 {
   height: 100vh;
 }
 
-.light-container {
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-}
-
-.light {
-  position: absolute;
-  opacity: 0;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
-  display: block;
-  width: 728px;
-  height: 728px;
-  transition: transform 0.1s, opacity 0.6s;
-  background: rgb(255, 255, 255);
-  pointer-events: none;
-  z-index: 1000;
-  background: radial-gradient(circle, rgba(111, 66, 193, 0.5) 0%, rgba(111, 66, 193, 0.31) 16%, rgba(255, 255, 255, 0) 66%);
-}
-
-.light-container.smaller .light {
-  transition: transform 0.2s;
-}
-
 .lines {
   position: fixed;
   top: 0;
@@ -230,8 +232,8 @@ h6 {
   height: 100vh;
   transition: all 2s ease-out 1.7s;
   transform-origin: center;
-  opacity: 0;
   transform: scaleX(0.5);
+  opacity: 0;
   z-index: -1;
 }
 .lines .col {
@@ -250,8 +252,32 @@ h6 {
   }
 }
 .lines.css-anim {
-  opacity: 0.1 !important;
+  opacity: 1;
   transform: scaleX(1);
+}
+
+.light-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.light-container.smaller .light {
+  transition: transform 0.2s;
+}
+
+.light {
+  position: absolute;
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  display: block;
+  width: 728px;
+  height: 728px;
+  transition: transform 0.1s, opacity 0.6s;
+  background: rgb(255, 255, 255);
+  pointer-events: none;
+  z-index: 1000;
+  background: radial-gradient(circle, rgba(111, 66, 193, 0.5) 0%, rgba(111, 66, 193, 0.31) 16%, rgba(255, 255, 255, 0) 66%);
 }
 
 .title-container {
@@ -810,8 +836,33 @@ header ul li.active a:after {
 header ul li:hover a:after {
   transform: scaleX(1);
 }
-header ul li:last-child a::before {
+header ul li:nth-last-child(2) a::before, header ul li:last-child a::before {
   display: none;
+}
+header ul li.contact-button {
+  position: fixed;
+}
+@media (max-width: 991px) {
+  header ul li.contact-button {
+    bottom: 15px;
+    display: block;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.6s ease;
+    max-width: 270px;
+    -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(100%);
+            backdrop-filter: blur(40px) saturate(120%) brightness(100%);
+  }
+}
+@media (min-width: 992px) {
+  header ul li.contact-button {
+    right: 0;
+    width: 8.333333%;
+  }
 }
 
 .home-container {
@@ -1178,6 +1229,10 @@ header ul li:last-child a::before {
 }
 .single-work .button-container .content-wrapper {
   display: block;
+  margin-top: 30px;
+}
+.single-work .button-container .content-wrapper p {
+  line-height: 2.4;
 }
 .single-work .mockup-design {
   display: block;
@@ -1192,11 +1247,18 @@ header ul li:last-child a::before {
   }
 }
 .single-work .mockup-design img {
-  width: 100%;
-  max-width: 100%;
   display: block;
   margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
   border-radius: 25px;
+}
+.single-work .mockup-design > span {
+  position: unset !important;
 }
 .single-work .mockup-design .bottom img {
   max-height: 600px;
@@ -1385,7 +1447,7 @@ header ul li:last-child a::before {
 }
 .page-about .big-card-about-container .big-card-about-counter, .page-about .big-card-about-container .big-card-about-content {
   width: 100%;
-  padding: 25px;
+  padding: 35px;
   border-radius: 25px;
 }
 @media (min-width: 992px) {
