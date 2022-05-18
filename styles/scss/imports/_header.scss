@@ -23,7 +23,7 @@
       top: 0;
       border-bottom: 1px solid transparent;
       background: rgb(0 0 0 / 0%);
-      background: rgb(0 0 0 / 33%);
+      background: rgb(22 16 50 / 80%);
       border-color: rgba(255, 255, 255, 0.2);
       -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(100%);
       backdrop-filter: blur(40px) saturate(120%) brightness(100%);
@@ -33,7 +33,6 @@
 
       @media (min-width: 576px) {
         height: 80px;
-        background: rgb(0 0 0 / 60%);
       }
     }
 

@@ -746,7 +746,7 @@ a.github-link {
   top: 0;
   border-bottom: 1px solid transparent;
   background: rgba(0, 0, 0, 0);
-  background: rgba(0, 0, 0, 0.33);
+  background: rgba(22, 16, 50, 0.8);
   border-color: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(100%);
   backdrop-filter: blur(40px) saturate(120%) brightness(100%);
@@ -757,7 +757,6 @@ a.github-link {
 @media (min-width: 576px) {
   .header-container-wrapper::after {
     height: 80px;
-    background: rgba(0, 0, 0, 0.6);
   }
 }
 .header-container-wrapper.fixed {
