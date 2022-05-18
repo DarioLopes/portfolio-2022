@@ -7,8 +7,6 @@ import Header from '../components/Header'
 import Background from '../components/Background'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import Github from '../components/Github'
 
 const pageTransitions = {
