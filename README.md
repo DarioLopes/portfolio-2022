@@ -1,4 +1,4 @@
-## Portfolio 2O22
+## Portfolio 2022
 
 made with NextJS and Directus headless CMS
 
