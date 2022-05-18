@@ -5,10 +5,10 @@ const prod = process.env.NODE_ENV === 'production'
 module.exports = {
   reactStrictMode: true,
   env: {
-    API: 'www.whathever.com',
+    API: 'https://admin.darioworld.com',
   },
   images: {
-    domains: ['www.whathever.com'],
+    domains: ['admin.darioworld.com'],
   },
   webpack(config) {
     config.module.rules.push({
