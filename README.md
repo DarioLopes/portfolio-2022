@@ -1,15 +1,14 @@
-## Portfolio 2022
+## [Portfolio 2022](https://www.darioworld.com)
 
 made with NextJS and Directus headless CMS
-
-https://www.darioworld.com
 
 ------
 
 Reinstall :
 
 ```bash
-git clone git@github.com:DarioLopes/portfolio-2022.git ./app
+cd /to/my/app/path/
+git clone git@github.com:DarioLopes/portfolio-2022.git .
 npm i
 npm run dev ## Or "npm run build" + pm2 for prod
 ```
@@ -39,3 +38,4 @@ module.exports = {
 
 ```
 
+And a simple **nginx reverse proxy** (...draw the rest of the fucking owl)
