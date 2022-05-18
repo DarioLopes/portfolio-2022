@@ -48,7 +48,7 @@ const Header = () => {
 
   useEffect(() => {
     controls.start((i) => params(i))
-  }, [loading])
+  }, [loading, controls])
 
   return (
     <div className="container-fluid header-container">

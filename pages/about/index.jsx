@@ -10,8 +10,6 @@ export default function About(about) {
   const [title] = useState('About')
   const controls = useAnimation()
 
-  console.log(about.data)
-
   controls.start((i) => ({
     opacity: [0, 1],
     y: [20, 0],

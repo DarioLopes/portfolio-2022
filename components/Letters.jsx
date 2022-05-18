@@ -25,23 +25,14 @@ const Letters = (props) => {
       },
     })
 
-    // Set opacity to 0 to avoid glitches on title update
-    const lettersOpacity = (i) => ({
-      opacity: 0,
-      transition: {
-        duration: 0,
-        delay: 0,
-      },
-    })
-
     // Handle no text
     !text || typeof text === undefined ? setText('no text provided') : setText(props.text)
+
     // Handle custom anim object
     if (customLettersAnim === 'letters') setCustomLettersAnim(letters)
-    // Start animations (with opacity 0 to avoid glitches)
-    letters.start((i) => lettersOpacity(i))
+
     letters.start((i) => lettersAnim(i))
-  }, [text, props.text, customLettersAnim, letters])
+  }, [text, props.text, props.delay, customLettersAnim, letters])
 
   return (
     <span aria-label={text} role={text} className="title-anim">

@@ -18,7 +18,12 @@ const Github = () => {
     >
       <Link href="https://github.com/DarioLopes/portfolio-2022/">
         <a className="github-link" title="Github Portfolio page" target="_blank">
-          <Image src={`${process.env.API}/assets/23e5f1cc-3cad-4074-91f1-03843979328b.svg`} width={22} height={22} />
+          <Image
+            src={`${process.env.API}/assets/23e5f1cc-3cad-4074-91f1-03843979328b.svg`}
+            width={22}
+            height={22}
+            alt="Portfolio repo - Github logo"
+          />
           <span>Github</span>
         </a>
       </Link>
