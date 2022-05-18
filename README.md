@@ -2,11 +2,19 @@
 
 made with NextJS and Directus headless CMS
 
-[Visit Here](https://www.darioworld.com)
+https://www.darioworld.com
 
 ------
 
-create next.config.js for the url API and SVG support
+Reinstall :
+
+```bash
+git clone git@github.com:DarioLopes/portfolio-2022.git ./app
+npm i
+npm run dev ## Or "npm run build" + pm2 for prod
+```
+
+create next.config.js at the root for the url API and SVG support
 
 ```javascript
 /** @type {import('next').NextConfig} */
@@ -14,10 +22,10 @@ create next.config.js for the url API and SVG support
 module.exports = {
   reactStrictMode: true,
   env: {
-    API: 'https://myapi.url.com',
+    API: 'https://api.url.com',
   },
   images: {
-    domains: ['myapi.url.com'],
+    domains: ['api.url.com'],
   },
   webpack(config) {
     config.module.rules.push({
