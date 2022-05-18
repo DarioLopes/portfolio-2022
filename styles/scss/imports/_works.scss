@@ -241,6 +241,7 @@
 
     .content-wrapper {
       margin-bottom: 60px;
+      min-height: 100px;
       margin-top: 0;
 
       @media (max-height: 919px) {
