@@ -1,4 +1,4 @@
-## [Portfolio 2022](https://www.darioworld.com)
+## [Portfolio 2022](https://www.darioworld.com){:target="\_blank"}
 
 made with NextJS and Directus headless CMS
 
