@@ -38,7 +38,7 @@ module.exports = {
 
 ```
 
-And a simple **nginx reverse proxy** (...draw the rest of the fucking owl)
+And a simple **nginx reverse proxy** (...draw the rest of the f*cking owl)
 
 ```nginx
 server {
