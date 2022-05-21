@@ -10,7 +10,7 @@ Reinstall for prod or dev :
 cd /to/my/app/path/
 git clone git@github.com:DarioLopes/portfolio-2022.git .
 npm i
-npm run dev ## Or "npm run build" + pm2 for prod
+npm run dev ## Or "npm run build" + pm2 for prod / add "-- --port 3000" to specify port
 ```
 
 create next.config.js at the root for the url API and SVG support
@@ -38,7 +38,7 @@ module.exports = {
 
 ```
 
-And a simple **nginx reverse proxy** (...draw the rest of the f*cking owl)
+And a simple **nginx reverse proxy**
 
 ```nginx
 server {
@@ -50,7 +50,7 @@ server {
 }
 ```
 
-Install SSL with certbot (install it before running... duh)
+Install SSL with certbot
 
 ```bash
 sudo certbot --nginx
