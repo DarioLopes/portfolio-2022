@@ -65,8 +65,9 @@
       &-counter {
         display: flex;
         flex-wrap: wrap;
-        background-color: $color1;
-        border: 1px solid $color1;
+        background: rgba(115, 115, 115, 0.15);
+        backdrop-filter: blur(40px) saturate(120%) brightness(100%);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         position: relative;
         overflow: hidden;
 
