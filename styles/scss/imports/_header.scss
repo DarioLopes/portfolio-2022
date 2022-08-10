@@ -39,6 +39,21 @@
     &.fixed {
       position: fixed;
 
+      header {
+        @media (min-width: 1400px) {
+          height: 80px;
+
+          .logo-link {
+            top: 9px !important;
+            transition: $anim;
+
+            img {
+              transition: $anim;
+            }
+          }
+        }
+      }
+
       &::after {
         transform: translate3d(0, 0, 0);
       }
@@ -52,6 +67,35 @@ header {
 
   @media (min-width: 576px) {
     height: 80px;
+  }
+
+  @media (min-width: 1400px) {
+    height: 90px;
+  }
+
+  .logo-link {
+    display: none;
+    z-index: 10;
+
+    @media (min-width: 992px) {
+      position: absolute;
+      width: 8.333333%;
+      left: 0;
+      top: 15px;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      width: 60px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
   }
 
   ul {
@@ -135,6 +179,32 @@ header {
         a {
           &::before {
             display: none;
+          }
+        }
+      }
+
+      @media (min-width: 1400px) {
+        &:nth-child(2) {
+          a {
+            padding-right: 20px;
+
+            &::after {
+              right: 15px;
+            }
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          a {
+            padding-left: 20px;
+
+            &::after {
+              left: 15px;
+            }
           }
         }
       }

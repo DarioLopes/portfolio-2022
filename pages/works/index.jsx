@@ -66,7 +66,7 @@ export default function Works(works) {
             </motion.button>
 
             <motion.div custom={1} animate={arrows} className="position">
-              {position + 1}/{totalWorks}
+              {position + 1 < 10 ? `0${position + 1}` : position + 1}/{totalWorks}
             </motion.div>
 
             <motion.button custom={2} animate={arrows} className="next eat-light" onClick={handleNext}>

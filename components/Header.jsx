@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import axios from 'axios'
 import _ from 'lodash'
@@ -29,7 +30,6 @@ const Header = () => {
       setLinks(response.data.data)
       setLoading(false)
     })
-
     // Get & animate
     axios.get(`${process.env.API}/items/about?fields=email`).then((response) => {
       setEmail(response.data.data.email)
@@ -56,6 +56,11 @@ const Header = () => {
         <div className="row">
           <div className="col-12 col-lg-4 offset-lg-4 p-0">
             <header>
+              <Link href={'/'}>
+                <motion.a href={'/'} custom={links.length / 2} animate={controls} className={'logo-link'}>
+                  <Image src={'/img/logo.svg'} width={60} height={60} priority={true} />
+                </motion.a>
+              </Link>
               <ul>
                 {links.map((link, i) => (
                   <motion.li key={link.id} custom={i} animate={controls} className={`menu-item${router.pathname === link.url ? ' active' : ''}`}>
