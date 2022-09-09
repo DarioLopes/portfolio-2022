@@ -76,6 +76,7 @@ header {
   .logo-link {
     display: none;
     z-index: 10;
+    opacity: 0;
 
     @media (min-width: 992px) {
       position: absolute;

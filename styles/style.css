@@ -793,6 +793,7 @@ header {
 header .logo-link {
   display: none;
   z-index: 10;
+  opacity: 0;
 }
 @media (min-width: 992px) {
   header .logo-link {
