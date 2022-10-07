@@ -54,6 +54,15 @@
         line-height: 2.4;
       }
     }
+
+    .visit-website {
+      z-index: 1;
+      bottom: -80px;
+
+      @media (min-width: 992px) {
+        left: 16%;
+      }
+    }
   }
 
   .mockup-design {

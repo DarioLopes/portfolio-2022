@@ -42,6 +42,7 @@ export default function Works(works) {
   const handleActive = (index) => {
     setPosition(index)
     setCurrentCover(works.data[index])
+    console.log(currentCover)
     if (delayTitle !== 0) setDelayTitle(0)
   }
 
@@ -78,13 +79,13 @@ export default function Works(works) {
               <span className="circle"></span>
             </motion.button>
           </div>
-
           <Title
             slug={currentCover.slug}
             id={currentCover.id}
-            skills={currentCover.project_skills}
             content={currentCover.content}
             subtitle={currentCover.content_title}
+            skills={currentCover.project_skills}
+            websiteLink={currentCover.website_link}
             button={true}
             delayTitle={delayTitle}
           >
@@ -120,6 +121,7 @@ export default function Works(works) {
 
 export async function getStaticProps() {
   const works = await getWorks()
+
   return {
     props: works,
     revalidate: 43200, //43200, // Refresh every 43200 seconds => every 12 hours
