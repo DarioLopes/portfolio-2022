@@ -58,7 +58,7 @@ const Header = () => {
             <header>
               <Link href={'/'}>
                 <motion.a href={'/'} custom={links.length / 2} animate={controls} className={'logo-link'}>
-                  <Image src={'/img/logo.svg'} width={60} height={60} priority={true} />
+                  <Image src={'/img/logo.svg'} width={60} height={60} priority={true} alt="Dario Lopes | Front End Developer | UI/UX Designer" />
                 </motion.a>
               </Link>
               <ul>

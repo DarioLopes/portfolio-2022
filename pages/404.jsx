@@ -34,7 +34,7 @@ export default function errorPage() {
           </Button>
         </motion.div>
       </div>
-      <Background src={`${process.env.API}/assets/216f18c8-da51-4cce-bea1-26eabe17d895`} alt={'404'} />
+      <Background src={`${process.env.API}/assets/216f18c8-da51-4cce-bea1-26eabe17d895`} alt="404" />
     </>
   )
 }
