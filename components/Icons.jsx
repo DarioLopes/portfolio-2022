@@ -22,9 +22,14 @@ const Icons = (props) => {
   return (
     <div className="svg-container">
       {props.skills.map((skill, i) => (
-        <motion.span key={`${i}-${skill.skills_id.icon}`} custom={i} animate={controlsIcon} className="icon-container">
-          <Image width={44} height={44} src={`${process.env.API}/assets/${skill.skills_id.icon}.svg`} alt={`${skill.skills_id.name}`} />
-        </motion.span>
+        <span className="svg-container-wrapper">
+          <motion.span key={`${i}-${skill.skills_id.icon}`} custom={i} animate={controlsIcon} className="icon-container">
+            <Image width={44} height={44} src={`${process.env.API}/assets/${skill.skills_id.icon}.svg`} alt={skill.skills_id.skill} />
+          </motion.span>
+          <p className="tooltip">
+            <span>{skill.skills_id.skill}</span>
+          </p>
+        </span>
       ))}
     </div>
   )

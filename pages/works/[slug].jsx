@@ -64,7 +64,16 @@ export default function WorksSingle({ single, works }) {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
-                  <Title slug={work.slug} id={work.id} subtitle={work.content_title} content={work.content} delayTitle={15}>
+                  <Title
+                    slug={work.slug}
+                    id={work.id}
+                    content={work.content}
+                    subtitle={work.content_title}
+                    skills={work.project_skills}
+                    websiteLink={work.website_link}
+                    hoverStyle={true}
+                    delayTitle={15}
+                  >
                     {work.name}
                   </Title>
                 </div>

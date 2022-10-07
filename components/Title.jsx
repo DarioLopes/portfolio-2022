@@ -2,12 +2,11 @@ import Letters from './Letters'
 import Button from './Button'
 import { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import axios from 'axios'
 import Icons from './Icons'
+import Link from 'next/link'
 
-export default function CoverTitle(props) {
+export default function Title(props) {
   const texts = useAnimation()
-  const [skills, setSkills] = useState([])
   const params = (i) => ({
     opacity: [0, 1],
     y: [25, 0],
@@ -18,12 +17,6 @@ export default function CoverTitle(props) {
       delay: (i + 10) * 0.15,
     },
   })
-
-  useEffect(() => {
-    axios.get(`${process.env.API}/items/works/${props.id}?fields=project_skills.skills_id.icon`).then((response) => {
-      setSkills(response.data.data.project_skills)
-    })
-  }, [props.id, props.skills])
 
   useEffect(() => {
     texts.start((i) => params(i))
@@ -44,7 +37,7 @@ export default function CoverTitle(props) {
         </motion.span>
 
         <motion.span custom={3} animate={texts} className="icons-container">
-          <Icons skills={skills} />
+          <Icons skills={props.skills} />
         </motion.span>
 
         <motion.span custom={2} animate={texts} className="content">
@@ -56,6 +49,16 @@ export default function CoverTitle(props) {
             <Button href={`/works/${props.slug}`} line>
               See sketch
             </Button>
+          </motion.span>
+        ) : null}
+
+        {props?.websiteLink ? (
+          <motion.span custom={4} animate={texts}>
+            <Link href={props.websiteLink}>
+              <a className={`button transparent eat-light visit-website ${props.hoverStyle ? 'hover-style' : null}`} target="_blank">
+                <span>Visit website</span>
+              </a>
+            </Link>
           </motion.span>
         ) : null}
       </div>
