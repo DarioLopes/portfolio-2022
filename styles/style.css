@@ -41,6 +41,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 body {
@@ -1343,10 +1344,18 @@ header ul li.contact-button {
 .single-work .button-container .visit-website {
   z-index: 1;
   bottom: -80px;
+  max-width: 100%;
+  width: calc(50% + 12px);
 }
 @media (min-width: 992px) {
   .single-work .button-container .visit-website {
     left: 16%;
+    width: calc(25% + 6px);
+  }
+}
+@media (min-width: 1400px) {
+  .single-work .button-container .visit-website {
+    width: 17%;
   }
 }
 .single-work .mockup-design {
@@ -1636,7 +1645,7 @@ header ul li.contact-button {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .page-about .big-card-about-container .big-card-about-counter .counter {
     width: 100%;
   }
@@ -1644,7 +1653,7 @@ header ul li.contact-button {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .page-about .big-card-about-container .big-card-about-counter .counter:nth-child(2), .page-about .big-card-about-container .big-card-about-counter .counter:nth-child(4) {
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }

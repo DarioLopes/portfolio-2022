@@ -42,7 +42,6 @@ export default function Works(works) {
   const handleActive = (index) => {
     setPosition(index)
     setCurrentCover(works.data[index])
-    console.log(currentCover)
     if (delayTitle !== 0) setDelayTitle(0)
   }
 

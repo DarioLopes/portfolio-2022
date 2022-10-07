@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import slugify from 'slugify'
 
-export default function Main(props) {
+const Main = (props) => {
   const router = useRouter()
   const [cssClass, setCssClass] = useState('-generic')
 
@@ -15,3 +15,5 @@ export default function Main(props) {
 
   return <main className={`page-${cssClass}${props.expendTo ? ' ' + props.expendTo : ''}`}>{props.children}</main>
 }
+
+export default Main

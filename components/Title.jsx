@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion'
 import Icons from './Icons'
 import Link from 'next/link'
 
-export default function Title(props) {
+const Title = (props) => {
   const texts = useAnimation()
   const params = (i) => ({
     opacity: [0, 1],
@@ -53,7 +53,7 @@ export default function Title(props) {
         ) : null}
 
         {props?.websiteLink ? (
-          <motion.span custom={4} animate={texts}>
+          <motion.span custom={5} animate={texts}>
             <Link href={props.websiteLink}>
               <a className={`button transparent eat-light visit-website ${props.hoverStyle ? 'hover-style' : null}`} target="_blank">
                 <span>Visit website</span>
@@ -65,3 +65,5 @@ export default function Title(props) {
     </div>
   )
 }
+
+export default Title
