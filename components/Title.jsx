@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import Icons from './Icons'
 import Link from 'next/link'
+import Subtitle from './Subtitle'
 
 const Title = (props) => {
   const texts = useAnimation()
@@ -33,7 +34,7 @@ const Title = (props) => {
 
       <div className="button-container">
         <motion.span custom={1} animate={texts} className="subtitle">
-          {props.subtitle}
+          <Subtitle>{props.subtitle}</Subtitle>
         </motion.span>
 
         <motion.span custom={3} animate={texts} className="icons-container">

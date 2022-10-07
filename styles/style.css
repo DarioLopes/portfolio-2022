@@ -511,6 +511,7 @@ a.github-link {
 
 .svg-container-wrapper {
   position: relative;
+  opacity: 0;
 }
 .svg-container-wrapper .tooltip {
   display: none;
