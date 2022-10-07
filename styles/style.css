@@ -1345,8 +1345,12 @@ header ul li.contact-button {
 .single-work .button-container .visit-website {
   z-index: 1;
   bottom: -80px;
-  max-width: 100%;
-  width: calc(50% + 12px);
+}
+@media (min-width: 768px) {
+  .single-work .button-container .visit-website {
+    max-width: 100%;
+    width: calc(50% + 12px);
+  }
 }
 @media (min-width: 992px) {
   .single-work .button-container .visit-website {

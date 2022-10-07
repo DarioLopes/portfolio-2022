@@ -58,8 +58,11 @@
     .visit-website {
       z-index: 1;
       bottom: -80px;
-      max-width: 100%;
-      width: calc(50% + 12px);
+
+      @media (min-width: 768px) {
+        max-width: 100%;
+        width: calc(50% + 12px);
+      }
 
       @media (min-width: 992px) {
         left: 16%;
