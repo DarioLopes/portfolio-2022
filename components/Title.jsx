@@ -1,5 +1,6 @@
 import Letters from './Letters'
 import Button from './Button'
+import Content from './Content'
 import { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import Icons from './Icons'
@@ -42,7 +43,7 @@ const Title = (props) => {
         </motion.span>
 
         <motion.span custom={2} animate={texts} className="content">
-          <div className="p-container content-wrapper" dangerouslySetInnerHTML={{ __html: props.content }} />
+          <Content>{props.content}</Content>
         </motion.span>
 
         {props?.button && props.button === true ? (

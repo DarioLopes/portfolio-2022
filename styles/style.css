@@ -1225,6 +1225,7 @@ header ul li.contact-button {
   margin-bottom: 60px;
   min-height: 100px;
   margin-top: 0;
+  opacity: 0;
 }
 @media (max-height: 919px) {
   .page-works .button-container .content-wrapper {

@@ -78,6 +78,7 @@ export default function Works(works) {
               <span className="circle"></span>
             </motion.button>
           </div>
+
           <Title
             slug={currentCover.slug}
             id={currentCover.id}
