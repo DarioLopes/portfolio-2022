@@ -1,10 +1,10 @@
-import { getSkills } from '../../lib/api'
-import Head from '../../components/Head'
-import Main from '../../components/Main'
-import Letters from '../../components/Letters'
 import { motion, useAnimation } from 'framer-motion'
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import Head from '../../components/Head'
+import Letters from '../../components/Letters'
+import Main from '../../components/Main'
+import { getSkills } from '../../lib/api'
 
 export default function Skills(skills) {
   const [title] = useState('Skills')

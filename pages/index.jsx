@@ -1,10 +1,8 @@
-import Main from '../components/Main'
+import { motion, useAnimation } from 'framer-motion'
 import Button from '../components/Button'
 import Head from '../components/Head'
 import Letters from '../components/Letters'
-import { motion, useAnimation } from 'framer-motion'
-import Image from 'next/image'
-import Background from '../components/Background'
+import Main from '../components/Main'
 
 const Home = () => {
   const controls = useAnimation()

@@ -1,6 +1,6 @@
 import { motion, useAnimation } from 'framer-motion'
-import { useEffect } from 'react'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 const Icons = (props) => {
   const controlsIcon = useAnimation()

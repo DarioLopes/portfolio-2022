@@ -1,11 +1,11 @@
-import Card from './Card.jsx'
+import 'atropos/css'
 import Atropos from 'atropos/react'
+import { motion } from 'framer-motion'
 import { useWindowSize } from 'react-window-size-hook'
 import { Navigation, Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { motion } from 'framer-motion'
-import 'atropos/css'
 import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import Card from './Card.jsx'
 import Letters from './Letters'
 
 const Slider = (props) => {

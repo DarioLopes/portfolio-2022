@@ -1,10 +1,10 @@
-import Letters from './Letters'
+import { motion, useAnimation } from 'framer-motion'
+import Link from 'next/link'
+import { useEffect } from 'react'
 import Button from './Button'
 import Content from './Content'
-import { useEffect, useState } from 'react'
-import { motion, useAnimation } from 'framer-motion'
 import Icons from './Icons'
-import Link from 'next/link'
+import Letters from './Letters'
 import Subtitle from './Subtitle'
 
 const Title = (props) => {
@@ -56,10 +56,12 @@ const Title = (props) => {
 
         {props?.websiteLink ? (
           <motion.span custom={5} animate={texts}>
-            <Link href={props.websiteLink}>
-              <a className={`button transparent eat-light visit-website ${props.hoverStyle ? 'hover-style' : null}`} target="_blank">
-                <span>Visit website</span>
-              </a>
+            <Link
+              href={props.websiteLink}
+              className={`button transparent eat-light visit-website ${props.hoverStyle ? 'hover-style' : null}`}
+              target="_blank"
+            >
+              <span>Visit website</span>
             </Link>
           </motion.span>
         ) : null}

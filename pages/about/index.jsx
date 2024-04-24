@@ -1,10 +1,10 @@
-import { getAbout } from '../../lib/api'
-import Head from '../../components/Head'
-import Main from '../../components/Main'
-import Letters from '../../components/Letters'
-import Button from '../../components/Button'
-import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
+import { useState } from 'react'
+import Button from '../../components/Button'
+import Head from '../../components/Head'
+import Letters from '../../components/Letters'
+import Main from '../../components/Main'
+import { getAbout } from '../../lib/api'
 
 export default function About(about) {
   const [title] = useState('About')

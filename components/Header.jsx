@@ -1,10 +1,10 @@
-import Link from 'next/link'
+import axios from 'axios'
+import { motion, useAnimation } from 'framer-motion'
+import _ from 'lodash'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { motion, useAnimation } from 'framer-motion'
-import axios from 'axios'
-import _ from 'lodash'
 
 const Header = () => {
   const controls = useAnimation()
@@ -56,27 +56,23 @@ const Header = () => {
         <div className="row">
           <div className="col-12 col-lg-4 offset-lg-4 p-0">
             <header>
-              <Link href={'/'}>
-                <motion.a href={'/'} custom={links.length / 2} animate={controls} className={'logo-link'}>
+              <Link href="/">
+                <motion.span custom={links.length / 2} animate={controls} className={'logo-link'}>
                   <Image src={'/img/logo.svg'} width={60} height={60} priority={true} alt="Dario Lopes | Front End Developer | UI/UX Designer" />
-                </motion.a>
+                </motion.span>
               </Link>
               <ul>
                 {links.map((link, i) => (
                   <motion.li key={link.id} custom={i} animate={controls} className={`menu-item${router.pathname === link.url ? ' active' : ''}`}>
                     <Link href={link.url}>
-                      <a>
-                        <span>{link.name}</span>
-                      </a>
+                      <span>{link.name}</span>
                     </Link>
                   </motion.li>
                 ))}
 
                 <motion.li custom={links.length} animate={controls} className={`menu-item contact-button`} target="_blank">
                   <Link href={`mailto:${email}`}>
-                    <a>
-                      <span>Contact</span>
-                    </a>
+                    <span>Contact</span>
                   </Link>
                 </motion.li>
               </ul>

@@ -1,13 +1,13 @@
-import 'bootstrap/dist/css/bootstrap-reboot.min.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
-import '../styles/style.css'
-import Lines from '../components/Lines'
-import Light from '../components/Light'
-import Header from '../components/Header'
-import Background from '../components/Background'
+import 'bootstrap/dist/css/bootstrap-reboot.min.css'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect } from 'react'
+import Background from '../components/Background'
 import Github from '../components/Github'
+import Header from '../components/Header'
+import Light from '../components/Light'
+import Lines from '../components/Lines'
+import '../styles/style.css'
 
 const pageTransitions = {
   // Animations à l'entrée et à la sortie de la page

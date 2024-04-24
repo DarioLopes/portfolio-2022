@@ -1,6 +1,6 @@
 import { motion, useAnimation } from 'framer-motion'
-import { useEffect } from 'react'
 import Parser from 'html-react-parser'
+import { useEffect } from 'react'
 
 const Content = (props) => {
   const controlsContent = useAnimation()

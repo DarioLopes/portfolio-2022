@@ -1,18 +1,16 @@
-import Letters from '../components/Letters'
-import Button from '../components/Button'
-import Background from '../components/Background'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+import Background from '../components/Background'
+import Button from '../components/Button'
+import Letters from '../components/Letters'
 
 export default function errorPage() {
   return (
     <>
       <div className="page-404">
-        <Link href={'/'}>
-          <a href={'/'} className={'logo-link on-page-404'}>
-            <Image src={'/img/logo.svg'} width={200} height={200} priority={true} />
-          </a>
+        <Link href={'/'} className="logo-link on-page-404">
+          <Image alt="404" src={'/img/logo.svg'} width={200} height={200} priority={true} />
         </Link>
 
         <h1 className="title">

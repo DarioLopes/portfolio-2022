@@ -1,12 +1,12 @@
-import { getWorks, getSingleWorks } from '../../lib/api'
+import { AnimatePresence, motion, useAnimation } from 'framer-motion'
+import Image from 'next/image'
+import { useEffect } from 'react'
+import Background from '../../components/Background'
+import Head from '../../components/Head'
 import Main from '../../components/Main'
 import Slider from '../../components/Slider'
 import Title from '../../components/Title'
-import Head from '../../components/Head'
-import Background from '../../components/Background'
-import { useEffect } from 'react'
-import { motion, AnimatePresence, useAnimation } from 'framer-motion'
-import Image from 'next/image'
+import { getSingleWorks, getWorks } from '../../lib/api'
 
 const contentTransitions = {
   // Animations à l'entrée et à la sortie de la page

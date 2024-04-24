@@ -1,6 +1,6 @@
+import _ from 'lodash'
 import { useRef, useState } from 'react'
 import { useWindowSize } from 'react-window-size-hook'
-import _ from 'lodash'
 
 const Light = (props) => {
   const [smaller, setSmaller] = useState(false)

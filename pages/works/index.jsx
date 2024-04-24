@@ -1,14 +1,14 @@
-import { getWorks } from '../../lib/api'
+import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { EffectFade, Navigation, Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import Head from '../../components/Head'
 import Main from '../../components/Main'
 import Title from '../../components/Title'
-import { useState, useEffect, useCallback, useRef } from 'react'
-import { motion, useAnimation } from 'framer-motion'
-import { Navigation, Pagination, EffectFade } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/effect-fade'
+import { getWorks } from '../../lib/api'
 
 export default function Works(works) {
   const [title] = useState('Works')
