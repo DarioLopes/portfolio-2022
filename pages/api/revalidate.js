@@ -21,7 +21,9 @@ export default async function handler(req, res) {
     await Promise.all(
       routes.map(async (route) => {
         try {
-          await res.revalidate(route)
+          setTimeout(async () => {
+            await res.revalidate(route)
+          }, 1000)
         } catch (e) {
           console.log(e)
         }
