@@ -320,7 +320,6 @@ a.github-link {
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   transform-origin: top center;
 }
@@ -524,7 +523,6 @@ a.github-link {
 .svg-container-wrapper .tooltip span {
   position: relative;
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 5px 15px;
@@ -661,7 +659,6 @@ a.github-link {
      object-fit: cover;
 }
 .flip-card-wrapper-button {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
@@ -1209,11 +1206,11 @@ header ul li.contact-button {
 }
 @media (max-width: 575px) {
   .page-works .button-container .svg-container > span:nth-child(1n+6),
-.page-works .button-container .svg-container svg:nth-child(1n+6) {
+  .page-works .button-container .svg-container svg:nth-child(1n+6) {
     display: none;
   }
   .page-works .button-container .svg-container > span:nth-child(5),
-.page-works .button-container .svg-container svg:nth-child(5) {
+  .page-works .button-container .svg-container svg:nth-child(5) {
     margin-right: 0;
   }
 }
@@ -1273,14 +1270,6 @@ header ul li.contact-button {
 .page-works .swiper-slide-visible .content-slide {
   opacity: 1;
 }
-@-webkit-keyframes zoomInAndOut {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.08);
-  }
-}
 @keyframes zoomInAndOut {
   0% {
     transform: scale(1);
@@ -1332,7 +1321,7 @@ header ul li.contact-button {
 }
 @media (min-width: 576px) {
   .single-work .button-container .svg-container > span:last-child,
-.single-work .button-container .svg-container svg:last-child {
+  .single-work .button-container .svg-container svg:last-child {
     margin-right: 0;
   }
 }
@@ -1513,6 +1502,9 @@ header ul li.contact-button {
 .page-skills .card-skill-wrapper > span {
   display: block;
   margin-bottom: 20px !important;
+}
+.page-skills .card-skill-wrapper .img {
+  margin-bottom: 15px;
 }
 .page-skills .card-skill-wrapper .subtitle {
   font-size: 1em;
