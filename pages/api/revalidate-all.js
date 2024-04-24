@@ -18,9 +18,15 @@ export default async function handler(req, res) {
     // this should be the actual path not a rewritten path
     // e.g. for "/blog/[slug]" this should be "/blog/post-1"
 
-    for (const route of routes) {
-      await res.revalidate(route)
-    }
+    await Promise.all(
+      routes.map(async (route) => {
+        try {
+          await res.revalidate(route)
+        } catch (e) {
+          console.log(e)
+        }
+      })
+    )
 
     return res.json({ revalidated: true, list: routes })
   } catch (err) {
