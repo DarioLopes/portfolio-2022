@@ -9,7 +9,7 @@ export default function errorPage() {
   return (
     <>
       <div className="page-404">
-        <Link href={'/'} className="logo-link on-page-404">
+        <Link href="/" className="logo-link on-page-404">
           <Image alt="404" src={'/img/logo.svg'} width={200} height={200} priority={true} />
         </Link>
 
@@ -27,7 +27,7 @@ export default function errorPage() {
             duration: 1,
           }}
         >
-          <Button href={'/'} line={true}>
+          <Button href="/" line={true}>
             {'Back home'}
           </Button>
         </motion.div>

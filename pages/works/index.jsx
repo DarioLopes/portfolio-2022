@@ -108,7 +108,7 @@ export default function Works(works) {
             return (
               <SwiperSlide key={i}>
                 <span className="bg">
-                  <Image layout="fill" src={`${process.env.API}/assets/${work.cover}`} priority="true" style={{ opacity: 0.3 }} alt={work.name} />
+                  <Image fill src={`${process.env.API}/assets/${work.cover}`} priority="true" style={{ opacity: 0.3 }} alt={work.name} />
                 </span>
               </SwiperSlide>
             )

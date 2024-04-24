@@ -82,7 +82,7 @@ export default function WorksSingle({ single, works }) {
               <div className="row">
                 <div className="col-12">
                   <motion.div className="mockup-design eat-light" animate={cover}>
-                    <Image src={`${process.env.API}/assets/${work.mockup}`} layout="fill" alt={work.name} priority={true} quality={90} />
+                    <Image src={`${process.env.API}/assets/${work.mockup}`} fill alt={work.name} priority={true} quality={90} />
                   </motion.div>
                 </div>
               </div>
